@@ -8,10 +8,7 @@ RUN git clone --recurse-submodules -b v1.30.0 https://github.com/grpc/grpc
 RUN mkdir -p ~/.local
 RUN mkdir -p ~/grpc/cmake/build
 RUN cd ~/grpc/cmake/build
-RUN cmake -DgRPC_INSTALL=ON \
-      -DgRPC_BUILD_TESTS=OFF \
-      -DCMAKE_INSTALL_PREFIX=~/.local \
-      ../..
+RUN cmake -DgRPC_INSTALL=ON -DgRPC_BUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=~/.local ../..
 RUN make -j
 RUN make install
 RUN cd ~/grpc/examples/cpp/helloworld
