@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-RUN ENV DEBIAN_FRONTEND=noninteractive
+RUN DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
 RUN apt-get install -y cmake build-essential autoconf libtool pkg-config git
 RUN git clone --recurse-submodules -b v1.30.0 https://github.com/grpc/grpc
