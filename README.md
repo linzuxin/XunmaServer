@@ -1,2 +1,2 @@
 # XunmaServer 
-XunmaServer 是个GRPC服务端
+XunmaServer 是个分布式缓存服务端
