@@ -6,7 +6,7 @@ RUN apt-get install -y build-essential autoconf libtool pkg-config
 RUN apt-get install -y git
 RUN git clone --recurse-submodules -b v1.30.0 https://github.com/grpc/grpc
 RUN cd grpc
-RUN mdkir -p .local
+RUN mkdir -p .local
 RUN mkdir -p cmake/build
 RUN pushd cmake/build
 RUN cmake -DgRPC_INSTALL=ON \
