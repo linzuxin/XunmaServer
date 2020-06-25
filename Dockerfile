@@ -9,4 +9,4 @@ RUN apt-get update \
 && make -j && make install \
 && cd /grpc/examples/cpp/helloworld/cmake/build \
 && cmake -DCMAKE_PREFIX_PATH=~/.local ../.. \
-&& make -j \
+&& make -j 
