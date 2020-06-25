@@ -3,7 +3,7 @@ RUN apt-get update
 RUN apt-get install -y cmake
 RUN echo cmake --version
 RUN apt-get install -y build-essential autoconf libtool pkg-config
-RUN apt-get install -y git
+RUN apt-get install -y git pushd popd
 RUN git clone --recurse-submodules -b v1.30.0 https://github.com/grpc/grpc
 RUN cd grpc
 RUN mkdir -p .local
