@@ -1,0 +1,2337 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/font.css">
+    <link rel="stylesheet" href="/app.css">
+    <title>doc</title>
+</head>
+
+<body type="article" theme="google-blue" class="" layout="docs" pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+    <section class="devsite-wrapper">
+        <devsite-header>
+            <div class="devsite-header--inner">
+                <div class="devsite-top-logo-row-wrapper-wrapper">
+                    <div class="devsite-top-logo-row-wrapper">
+                        <div class="devsite-top-logo-row">
+                            <button type="button" id="devsite-hamburger-menu"
+                                class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+                                data-category="Site-Wide Custom Events" data-label="Navigation menu button"
+                                visually-hidden aria-label="Open menu">
+                            </button>
+                            <div class="devsite-product-name-wrapper">
+
+
+                                <span class="devsite-product-name">
+                                    <ul class="devsite-breadcrumb-list">
+                                        <li class="devsite-breadcrumb-item
+             ">
+                                            <a href="/protocol-buffers"
+                                                class="devsite-breadcrumb-link gc-analytics-event"
+                                                data-category="Site-Wide Custom Events" data-label="Upper Header"
+                                                data-value="1">
+                                                Protocol Buffers
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </span>
+                            </div>
+                            <div class="devsite-top-logo-row-middle">
+                                <div class="devsite-header-upper-tabs">
+                                </div>
+                                <devsite-search enable-signin enable-search enable-suggestions enable-query-completion
+                                    project-name="Protocol Buffers" tenant-name="Google Developers"
+                                    project-scope="/protocol-buffers"
+                                    url-scoped="https://developers.google.com/s/results/protocol-buffers">
+                                    <form class="devsite-search-form" action="https://developers.google.com/s/results"
+                                        method="GET">
+                                        <div class="devsite-search-container">
+                                            <div class="devsite-searchbox">
+                                                <input aria-label="Search box" autocomplete="off"
+                                                    class="devsite-search-field devsite-search-query" name="q"
+                                                    placeholder="Search" role="combobox" type="text" value="">
+                                                <div class="devsite-search-image material-icons" aria-hidden="true">
+                                                </div>
+                                            </div>
+                                            <button type="button" search-open
+                                                class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+                                                aria-label="Open search box"></button>
+                                        </div>
+                                    </form>
+                                    <button type="button" search-close
+                                        class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+                                        aria-label="Close search box"></button>
+                                </devsite-search>
+
+                            </div>
+
+
+                            <devsite-language-selector>
+                                <devsite-select class="devsite-language-selector-menu">
+
+                                    <select aria-label="            Select your language preference."
+                                        class="devsite-language-selector-select" name="language" track-name="click"
+                                        track-type="languageSelector">
+                                        <option value="en" track-metadata-original-language="en"
+                                            track-metadata-selected-language="en" track-name="changed"
+                                            track-type="languageSelector" selected="selected">
+                                            English
+                                        </option>
+                                        <option value="id" track-metadata-original-language="en"
+                                            track-metadata-selected-language="id" track-name="changed"
+                                            track-type="languageSelector">
+                                            Bahasa Indonesia
+                                        </option>
+                                        <option value="de" track-metadata-original-language="en"
+                                            track-metadata-selected-language="de" track-name="changed"
+                                            track-type="languageSelector">
+                                            Deutsch
+                                        </option>
+                                        <option value="es" track-metadata-original-language="en"
+                                            track-metadata-selected-language="es" track-name="changed"
+                                            track-type="languageSelector">
+                                            Español
+                                        </option>
+                                        <option value="fr" track-metadata-original-language="en"
+                                            track-metadata-selected-language="fr" track-name="changed"
+                                            track-type="languageSelector">
+                                            Français
+                                        </option>
+                                        <option value="pt_br" track-metadata-original-language="en"
+                                            track-metadata-selected-language="pt_br" track-name="changed"
+                                            track-type="languageSelector">
+                                            Português – Brasil
+                                        </option>
+                                        <option value="ru" track-metadata-original-language="en"
+                                            track-metadata-selected-language="ru" track-name="changed"
+                                            track-type="languageSelector">
+                                            Русский
+                                        </option>
+                                        <option value="zh_cn" track-metadata-original-language="en"
+                                            track-metadata-selected-language="zh_cn" track-name="changed"
+                                            track-type="languageSelector">
+                                            中文 – 简体
+                                        </option>
+                                        <option value="ja" track-metadata-original-language="en"
+                                            track-metadata-selected-language="ja" track-name="changed"
+                                            track-type="languageSelector">
+                                            日本語
+                                        </option>
+                                        <option value="ko" track-metadata-original-language="en"
+                                            track-metadata-selected-language="ko" track-name="changed"
+                                            track-type="languageSelector">
+                                            한국어
+                                        </option>
+                                    </select>
+                                </devsite-select>
+                            </devsite-language-selector>
+
+
+
+                            <devsite-user signed-in id="devsite-user"></devsite-user>
+                        </div>
+                    </div>
+                </div>
+                <div class="devsite-collapsible-section
+    ">
+                    <div class="devsite-header-background">
+                        <div class="devsite-doc-set-nav-row">
+                            <devsite-tabs class="lower-tabs">
+                                <div class="devsite-tabs-wrapper">
+                                    <tab>
+                                        <a href="/protocol-buffers" class="gc-analytics-event " track-type="globalNav"
+                                            track-metadata-position="nav" track-metadata-eventdetail="nav"
+                                            track-name="home" data-category="Site-Wide Custom Events"
+                                            data-label="Tab: Home">
+                                            Home
+                                        </a>
+
+                                    </tab>
+                                    <tab active>
+                                        <a href="/protocol-buffers/docs/overview" class="gc-analytics-event "
+                                            track-type="globalNav" track-metadata-position="nav"
+                                            track-metadata-eventdetail="nav" track-name="guides"
+                                            aria-label="Guides, selected" data-category="Site-Wide Custom Events"
+                                            data-label="Tab: Guides">
+                                            Guides
+                                        </a>
+
+                                    </tab>
+                                    <tab>
+                                        <a href="/protocol-buffers/docs/reference/overview" class="gc-analytics-event "
+                                            track-type="globalNav" track-metadata-position="nav"
+                                            track-metadata-eventdetail="nav" track-name="reference"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Reference">
+                                            Reference
+                                        </a>
+
+                                    </tab>
+                                    <tab>
+                                        <a href="/protocol-buffers/docs/faq" class="gc-analytics-event "
+                                            track-type="globalNav" track-metadata-position="nav"
+                                            track-metadata-eventdetail="nav" track-name="support"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Support">
+                                            Support
+                                        </a>
+
+                                    </tab>
+                                </div>
+                            </devsite-tabs>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </devsite-header>
+        <devsite-book-nav scrollbars>
+
+
+
+
+
+
+
+
+            <nav class="devsite-book-nav devsite-nav nocontent">
+                <div class="devsite-mobile-header">
+                    <button type="button" id="devsite-close-nav"
+                        class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+                        data-category="Site-Wide Custom Events" data-label="Close navigation"
+                        aria-label="Close navigation">
+                    </button>
+                    <div class="devsite-product-name-wrapper">
+
+                        <span class="devsite-product-name">
+                            <ul class="devsite-breadcrumb-list">
+                                <li class="devsite-breadcrumb-item
+             ">
+                                    <a href="/protocol-buffers" class="devsite-breadcrumb-link gc-analytics-event"
+                                        data-category="Site-Wide Custom Events" data-label="Upper Header"
+                                        data-value="1">
+                                        Protocol Buffers
+                                    </a>
+                                </li>
+                            </ul>
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="devsite-book-nav-wrapper">
+                    <div class="devsite-mobile-nav-top">
+                        <ul class="devsite-nav-list">
+                            <li class="devsite-nav-item">
+                                <a href="/protocol-buffers" class="devsite-nav-title gc-analytics-event
+                            " data-category="Site-Wide Custom Events" data-label="Responsive Tab: Home"
+                                    track-type="navMenu" track-metadata-eventDetail="globalMenu"
+                                    track-metadata-position="nav" track-name="home">
+                                    <span class="devsite-nav-text" tooltip>
+                                        Home
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="devsite-nav-item">
+                                <a href="/protocol-buffers/docs/overview" class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              devsite-nav-active" data-category="Site-Wide Custom Events"
+                                    data-label="Responsive Tab: Guides" track-type="navMenu"
+                                    track-metadata-eventDetail="globalMenu" track-metadata-position="nav"
+                                    track-name="guides">
+                                    <span class="devsite-nav-text" tooltip>
+                                        Guides
+                                    </span>
+                                    <span class="devsite-nav-icon material-icons" data-icon="forward">
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="devsite-nav-item">
+                                <a href="/protocol-buffers/docs/reference/overview" class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              " data-category="Site-Wide Custom Events"
+                                    data-label="Responsive Tab: Reference" track-type="navMenu"
+                                    track-metadata-eventDetail="globalMenu" track-metadata-position="nav"
+                                    track-name="reference">
+                                    <span class="devsite-nav-text" tooltip>
+                                        Reference
+                                    </span>
+                                    <span class="devsite-nav-icon material-icons" data-icon="forward">
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="devsite-nav-item">
+                                <a href="/protocol-buffers/docs/faq" class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children              " data-category="Site-Wide Custom Events"
+                                    data-label="Responsive Tab: Support" track-type="navMenu"
+                                    track-metadata-eventDetail="globalMenu" track-metadata-position="nav"
+                                    track-name="support">
+                                    <span class="devsite-nav-text" tooltip>
+                                        Support
+                                    </span>
+                                    <span class="devsite-nav-icon material-icons" data-icon="forward">
+                                    </span>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="devsite-mobile-nav-bottom">
+                        <ul class="devsite-nav-list" menu="_book">
+                            <li class="devsite-nav-item"><a href="/protocol-buffers/docs/overview"
+                                    class="devsite-nav-title"><span class="devsite-nav-text" tooltip>Overview</span></a>
+                            </li>
+                            <li class="devsite-nav-item           devsite-nav-heading">
+                                <div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text"
+                                        tooltip>Developer Guide</span></div>
+                                <ul class="devsite-nav-section">
+                                    <li class="devsite-nav-item"><a href="/protocol-buffers/docs/proto"
+                                            class="devsite-nav-title"><span class="devsite-nav-text" tooltip>Language
+                                                Guide (proto2)</span></a></li>
+                                    <li class="devsite-nav-item"><a href="/protocol-buffers/docs/proto3"
+                                            class="devsite-nav-title"><span class="devsite-nav-text" tooltip>Language
+                                                Guide (proto3)</span></a></li>
+                                    <li class="devsite-nav-item"><a href="/protocol-buffers/docs/style"
+                                            class="devsite-nav-title"><span class="devsite-nav-text" tooltip>Style
+                                                Guide</span></a></li>
+                                    <li class="devsite-nav-item"><a href="/protocol-buffers/docs/encoding"
+                                            class="devsite-nav-title"><span class="devsite-nav-text"
+                                                tooltip>Encoding</span></a></li>
+                                    <li class="devsite-nav-item"><a href="/protocol-buffers/docs/techniques"
+                                            class="devsite-nav-title"><span class="devsite-nav-text"
+                                                tooltip>Techniques</span></a></li>
+                                    <li class="devsite-nav-item"><a href="/protocol-buffers/docs/addons"
+                                            class="devsite-nav-title"><span class="devsite-nav-text"
+                                                tooltip>Add-ons</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="devsite-nav-item           devsite-nav-heading">
+                                <div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text"
+                                        tooltip>Tutorials</span></div>
+                                <ul class="devsite-nav-section">
+                                    <li class="devsite-nav-item"><a href="/protocol-buffers/docs/tutorials"
+                                            class="devsite-nav-title"><span class="devsite-nav-text" tooltip>Tutorials
+                                                Overview</span></a></li>
+                                    <li class="devsite-nav-item"><a href="/protocol-buffers/docs/cpptutorial"
+                                            class="devsite-nav-title"><span class="devsite-nav-text" tooltip>Basics:
+                                                C++</span></a></li>
+                                    <li class="devsite-nav-item"><a href="/protocol-buffers/docs/csharptutorial"
+                                            class="devsite-nav-title"><span class="devsite-nav-text" tooltip>Basics:
+                                                C#</span></a></li>
+                                    <li class="devsite-nav-item"><a href="/protocol-buffers/docs/darttutorial"
+                                            class="devsite-nav-title"><span class="devsite-nav-text" tooltip>Basics:
+                                                Dart</span></a></li>
+                                    <li class="devsite-nav-item"><a href="/protocol-buffers/docs/gotutorial"
+                                            class="devsite-nav-title"><span class="devsite-nav-text" tooltip>Basics:
+                                                Go</span></a></li>
+                                    <li class="devsite-nav-item"><a href="/protocol-buffers/docs/javatutorial"
+                                            class="devsite-nav-title"><span class="devsite-nav-text" tooltip>Basics:
+                                                Java</span></a></li>
+                                    <li class="devsite-nav-item"><a href="/protocol-buffers/docs/pythontutorial"
+                                            class="devsite-nav-title"><span class="devsite-nav-text" tooltip>Basics:
+                                                Python</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="devsite-nav-item           devsite-nav-heading">
+                                <div class="devsite-nav-title devsite-nav-title-no-path"><span class="devsite-nav-text"
+                                        tooltip>Related Guides</span></div>
+                                <ul class="devsite-nav-section">
+                                    <li class="devsite-nav-item           devsite-nav-external"><a
+                                            href="http://www.grpc.io/docs/" class="devsite-nav-title"><span
+                                                class="devsite-nav-text" tooltip>gRPC</span><span
+                                                class="devsite-nav-icon material-icons" data-icon="external"
+                                                data-title="External" aria-hidden="true"></span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </devsite-book-nav>
+        <section id="gc-wrapper">
+            <main role="main" class="devsite-main-content" has-book-nav has-toc>
+                <devsite-toc class="devsite-nav"></devsite-toc>
+                <devsite-content>
+
+
+
+                    <article class="devsite-article">
+                        <article class="devsite-article-inner">
+                            <div class="devsite-article-meta">
+                                <ul class="devsite-breadcrumb-list">
+                                    <li class="devsite-breadcrumb-item
+             ">
+                                        <a href="/" class="devsite-breadcrumb-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+                                            data-value="1">
+                                            Home
+
+                                        </a>
+                                    </li>
+                                    <li class="devsite-breadcrumb-item
+             ">
+                                        <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true">
+                                        </div>
+                                        <a href="/products" class="devsite-breadcrumb-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+                                            data-value="2">
+                                            Products
+
+                                        </a>
+                                    </li>
+                                    <li class="devsite-breadcrumb-item
+             ">
+                                        <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true">
+                                        </div>
+                                        <a href="/protocol-buffers" class="devsite-breadcrumb-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+                                            data-value="3">
+                                            Protocol Buffers
+
+                                        </a>
+                                    </li>
+                                    <li class="devsite-breadcrumb-item
+             ">
+                                        <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true">
+                                        </div>
+                                        <a href="/protocol-buffers/docs/overview"
+                                            class="devsite-breadcrumb-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+                                            data-value="4">
+                                            Guides
+
+                                        </a>
+                                    </li>
+                                </ul>
+                                <devsite-page-rating position="header" selected-rating="0" hover-rating-star="0">
+                                </devsite-page-rating>
+
+                            </div>
+
+                            <h1 class="devsite-page-title">Language Guide</h1>
+
+                            <devsite-toc class="devsite-nav" devsite-toc-embedded>
+                            </devsite-toc>
+
+                            <div class="devsite-article-body clearfix
+      ">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <ul>
+                                    <li><a href="#simple">Defining A Message Type</a></li>
+                                    <li><a href="#scalar">Scalar Value Types</a></li>
+                                    <li><a href="#optional">Optional And Default Values</a></li>
+                                    <li><a href="#enum">Enumerations</a></li>
+                                    <li><a href="#other">Using Other Message Types</a></li>
+                                    <li><a href="#nested">Nested Types</a></li>
+                                    <li><a href="#updating">Updating A Message Type</a></li>
+                                    <li><a href="#extensions">Extensions</a></li>
+                                    <li><a href="#oneof">Oneof</a></li>
+                                    <li><a href="#maps">Maps</a></li>
+                                    <li><a href="#packages">Packages</a></li>
+                                    <li><a href="#services">Defining Services</a></li>
+                                    <li><a href="#options">Options</a></li>
+                                    <li><a href="#generating">Generating Your Classes</a></li>
+                                </ul>
+
+                                <p>This guide describes how to use the protocol buffer language to structure your
+                                    protocol buffer data, including <code translate="no" dir="ltr">.proto</code> file
+                                    syntax and how to generate data access classes from your <code translate="no"
+                                        dir="ltr">.proto</code> files. It covers the <strong>proto2</strong> version of
+                                    the protocol buffers language: for information on <strong>proto3</strong> syntax,
+                                    see the <a href="/protocol-buffers/docs/proto3">Proto3 Language Guide</a>.</p>
+
+                                <p>This is a reference guide – for a step by step example that uses many of the features
+                                    described in this document, see the <a
+                                        href="/protocol-buffers/docs/tutorials">tutorial</a> for your chosen language.
+                                </p>
+
+                                <h2 id="simple" data-text="Defining A Message Type" tabindex="0">Defining A Message Type
+                                </h2>
+
+                                <p>First let&#39;s look at a very simple example. Let&#39;s say you want to define a
+                                    search request message format, where each search request has a query string, the
+                                    particular page of results you are interested in, and a number of results per page.
+                                    Here&#39;s the <code translate="no" dir="ltr">.proto</code> file you use to define
+                                    the message type.</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message SearchRequest {
+  required string query = 1;
+  optional int32 page_number = 2;
+  optional int32 result_per_page = 3;
+}</pre>
+
+                                <p>The <code translate="no" dir="ltr">SearchRequest</code> message definition specifies
+                                    three fields (name/value pairs), one for each piece of data that you want to include
+                                    in this type of message. Each field has a name and a type.</p>
+
+                                <h3 id="specifying_field_types" data-text="Specifying Field Types" tabindex="0">
+                                    Specifying Field Types</h3>
+
+                                <p>In the above example, all the fields are <a href="#scalar">scalar types</a>: two
+                                    integers (<code translate="no" dir="ltr">page_number</code> and <code translate="no"
+                                        dir="ltr">result_per_page</code>) and a string (<code translate="no"
+                                        dir="ltr">query</code>). However, you can also specify composite types for your
+                                    fields, including <a href="#enum">enumerations</a> and other message types.</p>
+
+                                <h3 id="assigning_field_numbers" data-text="Assigning Field Numbers" tabindex="0">
+                                    Assigning Field Numbers</h3>
+
+                                <p>As you can see, each field in the message definition has a <strong>unique
+                                        number</strong>. These numbers are used to identify your fields in the <a
+                                        href="/protocol-buffers/docs/encoding">message binary format</a>, and should not
+                                    be changed once your message type is in use. Note that field numbers in the range 1
+                                    through 15 take one byte to encode, including the field number and the field&#39;s
+                                    type (you can find out more about this in <a
+                                        href="/protocol-buffers/docs/encoding#structure">Protocol Buffer Encoding</a>).
+                                    Field numbers in the range 16 through 2047 take two bytes. So you should reserve the
+                                    field numbers 1 through 15 for very frequently occurring message elements. Remember
+                                    to leave some room for frequently occurring elements that might be added in the
+                                    future.</p>
+
+                                <p>The smallest field number you can specify is 1, and the largest is 2<sup>29</sup> -
+                                    1, or 536,870,911. You also cannot use the numbers 19000 through 19999 (<code
+                                        translate="no" dir="ltr">FieldDescriptor::kFirstReservedNumber</code> through
+                                    <code translate="no" dir="ltr">FieldDescriptor::kLastReservedNumber</code>), as they
+                                    are reserved for the Protocol Buffers implementation - the protocol buffer compiler
+                                    will complain if you use one of these reserved numbers in your <code translate="no"
+                                        dir="ltr">.proto</code>. Similarly, you cannot use any previously <a
+                                        href="#reserved">reserved</a> field numbers.</p>
+
+                                <h3 id="specifying_field_rules" data-text="Specifying Field Rules" tabindex="0">
+                                    Specifying Field Rules</h3>
+
+                                <p>You specify that message fields are one of the following:</p>
+
+                                <ul>
+                                    <li><code translate="no" dir="ltr">required</code>: a well-formed message must have
+                                        exactly one of this field.</li>
+                                    <li><code translate="no" dir="ltr">optional</code>: a well-formed message can have
+                                        zero or one of this field (but not more than one).</li>
+                                    <li><code translate="no" dir="ltr">repeated</code>: this field can be repeated any
+                                        number of times (including zero) in a well-formed message. The order of the
+                                        repeated values will be preserved.</li>
+                                </ul>
+
+                                <p>For historical reasons, <code translate="no" dir="ltr">repeated</code> fields of
+                                    scalar numeric types aren&#39;t encoded as efficiently as they could be. New code
+                                    should use the special option <code translate="no" dir="ltr">[packed=true]</code> to
+                                    get a more efficient encoding. For example:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no"
+                                    dir="ltr">repeated int32 samples = 4 [packed=true];</pre>
+
+                                <p>You can find out more about <code translate="no" dir="ltr">packed</code> encoding in
+                                    <a href="/protocol-buffers/docs/encoding#packed">Protocol Buffer Encoding</a>.</p>
+
+                                <p><strong>Required Is Forever</strong> You should be very careful about marking fields
+                                    as <code translate="no" dir="ltr">required</code>. If at some point you wish to stop
+                                    writing or sending a required field, it will be problematic to change the field to
+                                    an optional field – old readers will consider messages without this field to be
+                                    incomplete and may reject or drop them unintentionally. You should consider writing
+                                    application-specific custom validation routines for your buffers instead. Some
+                                    engineers at Google have come to the conclusion that using <code translate="no"
+                                        dir="ltr">required</code> does more harm than good; they prefer to use only
+                                    <code translate="no" dir="ltr">optional</code> and <code translate="no"
+                                        dir="ltr">repeated</code>. However, this view is not universal.</p>
+
+                                <h3 id="adding_more_message_types" data-text="Adding More Message Types" tabindex="0">
+                                    Adding More Message Types</h3>
+
+                                <p>Multiple message types can be defined in a single <code translate="no"
+                                        dir="ltr">.proto</code> file. This is useful if you are defining multiple
+                                    related messages – so, for example, if you wanted to define the reply message format
+                                    that corresponds to your <code translate="no" dir="ltr">SearchResponse</code>
+                                    message type, you could add it to the same <code translate="no"
+                                        dir="ltr">.proto</code>:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message SearchRequest {
+  required string query = 1;
+  optional int32 page_number = 2;
+  optional int32 result_per_page = 3;
+}
+
+message SearchResponse {
+ ...
+}</pre>
+
+                                <p><strong>Combining Messages leads to bloat</strong> While multiple message types (such
+                                    as message, enum, and service) can be defined in a single <code translate="no"
+                                        dir="ltr">.proto</code> file, it can also lead to dependency bloat when large
+                                    numbers of messages with varying dependencies are defined in a single file. It&#39;s
+                                    recommended to include as few message types per <code translate="no"
+                                        dir="ltr">.proto</code> file as possible.</p>
+
+                                <h3 id="adding_comments" data-text="Adding Comments" tabindex="0">Adding Comments</h3>
+
+                                <p>To add comments to your <code translate="no" dir="ltr">.proto</code> files, use
+                                    C/C++-style <code translate="no" dir="ltr">//</code> and <code translate="no"
+                                        dir="ltr">/* ... */</code> syntax.</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+/* SearchRequest represents a search query, with pagination options to
+ * indicate which results to include in the response. */
+
+message SearchRequest {
+  required string query = 1;
+  optional int32 page_number = 2;  // Which page number do we want?
+  optional int32 result_per_page = 3;  // Number of results to return per page.
+}</pre>
+
+                                <h3 id="reserved" data-text="Reserved Fields" tabindex="0">Reserved Fields</h3>
+
+                                <p>If you <a href="#updating">update</a> a message type by entirely removing a field, or
+                                    commenting it out, future users can reuse the field number when making their own
+                                    updates to the type. This can cause severe issues if they later load old versions of
+                                    the same <code translate="no" dir="ltr">.proto</code>, including data corruption,
+                                    privacy bugs, and so on. One way to make sure this doesn&#39;t happen is to specify
+                                    that the field numbers (and/or names, which can also cause issues for JSON
+                                    serialization) of your deleted fields are <code translate="no"
+                                        dir="ltr">reserved</code>. The protocol buffer compiler will complain if any
+                                    future users try to use these field identifiers.</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">message Foo {
+  reserved 2, 15, 9 to 11;
+  reserved "foo", "bar";
+}</pre>
+
+                                <p>Note that you can&#39;t mix field names and field numbers in the same <code
+                                        translate="no" dir="ltr">reserved</code> statement.</p>
+
+                                <h3 id="whats_generated_from_your_proto" data-text="What's Generated From Your .proto?"
+                                    tabindex="0">What's Generated From Your <code translate="no"
+                                        dir="ltr">.proto</code>?</h3>
+
+                                <p>When you run the <a href="#generating">protocol buffer compiler</a> on a <code
+                                        translate="no" dir="ltr">.proto</code>, the compiler generates the code in your
+                                    chosen language you&#39;ll need to work with the message types you&#39;ve described
+                                    in the file, including getting and setting field values, serializing your messages
+                                    to an output stream, and parsing your messages from an input stream.</p>
+
+                                <ul>
+                                    <li>For <strong>C++</strong>, the compiler generates a <code translate="no"
+                                            dir="ltr">.h</code> and <code translate="no" dir="ltr">.cc</code> file from
+                                        each <code translate="no" dir="ltr">.proto</code>, with a class for each message
+                                        type described in your file.</li>
+                                    <li>For <strong>Java</strong>, the compiler generates a <code translate="no"
+                                            dir="ltr">.java</code> file with a class for each message type, as well as
+                                        special <code translate="no" dir="ltr">Builder</code> classes for creating
+                                        message class instances.</li>
+                                    <li><strong>Python</strong> is a little different – the Python compiler generates a
+                                        module with a static descriptor of each message type in your <code
+                                            translate="no" dir="ltr">.proto</code>, which is then used with a
+                                        <em>metaclass</em> to create the necessary Python data access class at runtime.
+                                    </li>
+                                    <li>For <strong>Go</strong>, the compiler generates a <code translate="no"
+                                            dir="ltr">.pb.go</code> file with a type for each message type in your file.
+                                    </li>
+                                </ul>
+
+                                <p>You can find out more about using the APIs for each language by following the
+                                    tutorial for your chosen language. For even more API details, see the relevant <a
+                                        href="/protocol-buffers/docs/reference/overview">API reference</a>.</p>
+
+                                <h2 id="scalar" data-text="Scalar Value Types" tabindex="0">Scalar Value Types</h2>
+
+                                <p>A scalar message field can have one of the following types – the table shows the type
+                                    specified in the <code translate="no" dir="ltr">.proto</code> file, and the
+                                    corresponding type in the automatically generated class:</p>
+
+                                <table width="50%" border="1">
+
+                                    <tbody>
+
+                                        <tr>
+
+                                            <th>.proto Type</th>
+
+                                            <th>Notes</th>
+
+                                            <th>C++ Type</th>
+
+                                            <th>Java Type</th>
+
+                                            <th>Python Type<sup>[2]</sup></th>
+
+                                            <th>Go Type</th>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>double</td>
+
+                                            <td></td>
+
+                                            <td>double</td>
+
+                                            <td>double</td>
+
+                                            <td>float</td>
+
+                                            <td>*float64</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>float</td>
+
+                                            <td></td>
+
+                                            <td>float</td>
+
+                                            <td>float</td>
+
+                                            <td>float</td>
+
+                                            <td>*float32</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>int32</td>
+
+                                            <td>Uses variable-length encoding. Inefficient for encoding negative numbers
+                                                – if your field is likely to have negative values, use sint32 instead.
+                                            </td>
+
+                                            <td>int32</td>
+
+                                            <td>int</td>
+
+                                            <td>int</td>
+
+                                            <td>*int32</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>int64</td>
+
+                                            <td>Uses variable-length encoding. Inefficient for encoding negative numbers
+                                                – if your field is likely to have negative values, use sint64 instead.
+                                            </td>
+
+                                            <td>int64</td>
+
+                                            <td>long</td>
+
+                                            <td>int/long<sup>[3]</sup></td>
+
+                                            <td>*int64</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>uint32</td>
+
+                                            <td>Uses variable-length encoding.</td>
+
+                                            <td>uint32</td>
+
+                                            <td>int<sup>[1]</sup></td>
+
+                                            <td>int/long<sup>[3]</sup></td>
+
+                                            <td>*uint32</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>uint64</td>
+
+                                            <td>Uses variable-length encoding.</td>
+
+                                            <td>uint64</td>
+
+                                            <td>long<sup>[1]</sup></td>
+
+                                            <td>int/long<sup>[3]</sup></td>
+
+                                            <td>*uint64</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>sint32</td>
+
+                                            <td>Uses variable-length encoding. Signed int value. These more efficiently
+                                                encode negative numbers than regular int32s.</td>
+
+                                            <td>int32</td>
+
+                                            <td>int</td>
+
+                                            <td>int</td>
+
+                                            <td>*int32</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>sint64</td>
+
+                                            <td>Uses variable-length encoding. Signed int value. These more efficiently
+                                                encode negative numbers than regular int64s.</td>
+
+                                            <td>int64</td>
+
+                                            <td>long</td>
+
+                                            <td>int/long<sup>[3]</sup></td>
+
+                                            <td>*int64</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>fixed32</td>
+
+                                            <td>Always four bytes. More efficient than uint32 if values are often
+                                                greater than 2<sup>28</sup>.</td>
+
+                                            <td>uint32</td>
+
+                                            <td>int<sup>[1]</sup></td>
+
+                                            <td>int/long<sup>[3]</sup></td>
+
+                                            <td>*uint32</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>fixed64</td>
+
+                                            <td>Always eight bytes. More efficient than uint64 if values are often
+                                                greater than 2<sup>56</sup>.</td>
+
+                                            <td>uint64</td>
+
+                                            <td>long<sup>[1]</sup></td>
+
+                                            <td>int/long<sup>[3]</sup></td>
+
+                                            <td>*uint64</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>sfixed32</td>
+
+                                            <td>Always four bytes.</td>
+
+                                            <td>int32</td>
+
+                                            <td>int</td>
+
+                                            <td>int</td>
+
+                                            <td>*int32</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>sfixed64</td>
+
+                                            <td>Always eight bytes.</td>
+
+                                            <td>int64</td>
+
+                                            <td>long</td>
+
+                                            <td>int/long<sup>[3]</sup></td>
+
+                                            <td>*int64</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>bool</td>
+
+                                            <td></td>
+
+                                            <td>bool</td>
+
+                                            <td>boolean</td>
+
+                                            <td>bool</td>
+
+                                            <td>*bool</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>string</td>
+
+                                            <td>A string must always contain UTF-8 encoded or 7-bit ASCII text.</td>
+
+                                            <td>string</td>
+
+                                            <td>String</td>
+
+                                            <td>unicode (Python 2) or str (Python 3)</td>
+
+                                            <td>*string</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>bytes</td>
+
+                                            <td>May contain any arbitrary sequence of bytes.</td>
+
+                                            <td>string</td>
+
+                                            <td>ByteString</td>
+
+                                            <td>bytes</td>
+
+                                            <td>[]byte</td>
+
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                                <p>You can find out more about how these types are encoded when you serialize your
+                                    message in <a href="/protocol-buffers/docs/encoding">Protocol Buffer Encoding</a>.
+                                </p>
+
+                                <p><sup>[1]</sup> In Java, unsigned 32-bit and 64-bit integers are represented using
+                                    their signed counterparts, with the top bit simply being stored in the sign bit.</p>
+
+                                <p><sup>[2]</sup> In all cases, setting values to a field will perform type checking to
+                                    make sure it is valid.</p>
+
+                                <p><sup>[3]</sup> 64-bit or unsigned 32-bit integers are always represented as long when
+                                    decoded, but can be an int if an int is given when setting the field. In all cases,
+                                    the value must fit in the type represented when set. See [2].</p>
+
+                                <h2 id="optional" data-text="Optional Fields And Default Values" tabindex="0">Optional
+                                    Fields And Default Values</h2>
+
+                                <p>As mentioned above, elements in a message description can be labeled <code
+                                        translate="no" dir="ltr">optional</code>. A well-formed message may or may not
+                                    contain an optional element. When a message is parsed, if it does not contain an
+                                    optional element, the corresponding field in the parsed object is set to the default
+                                    value for that field. The default value can be specified as part of the message
+                                    description. For example, let&#39;s say you want to provide a default value of 10
+                                    for a <code translate="no" dir="ltr">SearchRequest</code>&#39;s <code translate="no"
+                                        dir="ltr">result_per_page</code> value.</p>
+
+                                <pre class="prettyprint lang-proto" translate="no"
+                                    dir="ltr">optional int32 result_per_page = 3 [default = 10];</pre>
+
+                                <p>If the default value is not specified for an optional element, a type-specific
+                                    default value is used instead: for strings, the default value is the empty string.
+                                    For bytes, the default value is the empty byte string. For bools, the default value
+                                    is false. For numeric types, the default value is zero. For enums, the default value
+                                    is the first value listed in the enum&#39;s type definition. This means care must be
+                                    taken when adding a value to the beginning of an enum value list. See the <a
+                                        href="#updating">Updating A Message Type</a> section for guidelines on how to
+                                    safely change definitions.</p>
+
+                                <h2 id="enum" data-text="Enumerations" tabindex="0">Enumerations</h2>
+
+                                <p>When you&#39;re defining a message type, you might want one of its fields to only
+                                    have one of a pre-defined list of values. For example, let&#39;s say you want to add
+                                    a <code translate="no" dir="ltr">corpus</code> field for each <code translate="no"
+                                        dir="ltr">SearchRequest</code>, where the corpus can be <code translate="no"
+                                        dir="ltr">UNIVERSAL</code>, <code translate="no" dir="ltr">WEB</code>, <code
+                                        translate="no" dir="ltr">IMAGES</code>, <code translate="no"
+                                        dir="ltr">LOCAL</code>, <code translate="no" dir="ltr">NEWS</code>, <code
+                                        translate="no" dir="ltr">PRODUCTS</code> or <code translate="no"
+                                        dir="ltr">VIDEO</code>. You can do this very simply by adding an <code
+                                        translate="no" dir="ltr">enum</code> to your message definition - a field with
+                                    an <code translate="no" dir="ltr">enum</code> type can only have one of a specified
+                                    set of constants as its value (if you try to provide a different value, the parser
+                                    will treat it like an unknown field). In the following example we&#39;ve added an
+                                    <code translate="no" dir="ltr">enum</code> called <code translate="no"
+                                        dir="ltr">Corpus</code> with all the possible values, and a field of type <code
+                                        translate="no" dir="ltr">Corpus</code>:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message SearchRequest {
+  required string query = 1;
+  optional int32 page_number = 2;
+  optional int32 result_per_page = 3 [default = 10];
+  enum Corpus {
+    UNIVERSAL = 0;
+    WEB = 1;
+    IMAGES = 2;
+    LOCAL = 3;
+    NEWS = 4;
+    PRODUCTS = 5;
+    VIDEO = 6;
+  }
+  optional Corpus corpus = 4 [default = UNIVERSAL];
+}
+</pre>
+
+                                <p>You can define aliases by assigning the same value to different enum constants. To do
+                                    this you need to set the <code translate="no" dir="ltr">allow_alias</code> option to
+                                    <code translate="no" dir="ltr">true</code>, otherwise protocol compiler will
+                                    generate an error message when aliases are found.</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">enum EnumAllowingAlias {
+  option allow_alias = true;
+  UNKNOWN = 0;
+  STARTED = 1;
+  RUNNING = 1;
+}
+enum EnumNotAllowingAlias {
+  UNKNOWN = 0;
+  STARTED = 1;
+  // RUNNING = 1;  // Uncommenting this line will cause a compile error inside Google and a warning message outside.
+}
+</pre>
+
+                                <p>Enumerator constants must be in the range of a 32-bit integer. Since <code
+                                        translate="no" dir="ltr">enum</code> values use <a
+                                        href="/protocol-buffers/docs/encoding">varint encoding</a> on the wire, negative
+                                    values are inefficient and thus not recommended. You can define <code translate="no"
+                                        dir="ltr">enum</code>s within a message definition, as in the above example, or
+                                    outside – these <code translate="no" dir="ltr">enum</code>s can be reused in any
+                                    message definition in your <code translate="no" dir="ltr">.proto</code> file. You
+                                    can also use an <code translate="no" dir="ltr">enum</code> type declared in one
+                                    message as the type of a field in a different message, using the syntax <code
+                                        translate="no" dir="ltr">_MessageType_._EnumType_</code>.</p>
+
+                                <p>When you run the protocol buffer compiler on a <code translate="no"
+                                        dir="ltr">.proto</code> that uses an <code translate="no" dir="ltr">enum</code>,
+                                    the generated code will have a corresponding <code translate="no"
+                                        dir="ltr">enum</code> for Java or C++, or a special <code translate="no"
+                                        dir="ltr">EnumDescriptor</code> class for Python that&#39;s used to create a set
+                                    of symbolic constants with integer values in the runtime-generated class.</p>
+
+                                <aside class="caution">**Caution:** the generated code may be subject to
+                                    language-specific limitations on the number of enumerators (low thousands for one
+                                    language). Please review the limitations for the languages you plan to use.</aside>
+
+                                <p>For more information about how to work with message <code translate="no"
+                                        dir="ltr">enum</code>s in your applications, see the <a
+                                        href="/protocol-buffers/docs/reference/overview">generated code guide</a> for
+                                    your chosen language.</p>
+
+                                <h3 id="reserved_values" data-text="Reserved Values" tabindex="0">Reserved Values</h3>
+
+                                <p>If you <a href="#updating">update</a> an enum type by entirely removing an enum
+                                    entry, or commenting it out, future users can reuse the numeric value when making
+                                    their own updates to the type. This can cause severe issues if they later load old
+                                    versions of the same <code translate="no" dir="ltr">.proto</code>, including data
+                                    corruption, privacy bugs, and so on. One way to make sure this doesn&#39;t happen is
+                                    to specify that the numeric values (and/or names, which can also cause issues for
+                                    JSON serialization) of your deleted entries are <code translate="no"
+                                        dir="ltr">reserved</code>. The protocol buffer compiler will complain if any
+                                    future users try to use these identifiers. You can specify that your reserved
+                                    numeric value range goes up to the maximum possible value using the <code
+                                        translate="no" dir="ltr">max</code> keyword.</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+enum Foo {
+  reserved 2, 15, 9 to 11, 40 to max;
+  reserved "FOO", "BAR";
+}</pre>
+
+                                <p>Note that you can&#39;t mix field names and numeric values in the same <code
+                                        translate="no" dir="ltr">reserved</code> statement.</p>
+
+                                <h2 id="other" data-text="Using Other Message Types" tabindex="0">Using Other Message
+                                    Types</h2>
+
+                                <p>You can use other message types as field types. For example, let&#39;s say you wanted
+                                    to include <code translate="no" dir="ltr">Result</code> messages in each <code
+                                        translate="no" dir="ltr">SearchResponse</code> message – to do this, you can
+                                    define a <code translate="no" dir="ltr">Result</code> message type in the same <code
+                                        translate="no" dir="ltr">.proto</code> and then specify a field of type <code
+                                        translate="no" dir="ltr">Result</code> in <code translate="no"
+                                        dir="ltr">SearchResponse</code>:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message SearchResponse {
+  repeated Result result = 1;
+}
+
+message Result {
+  required string url = 1;
+  optional string title = 2;
+  repeated string snippets = 3;
+}</pre>
+
+                                <h3 id="importing_definitions" data-text="Importing Definitions" tabindex="0">Importing
+                                    Definitions</h3>
+
+                                <p>In the above example, the <code translate="no" dir="ltr">Result</code> message type
+                                    is defined in the same file as <code translate="no" dir="ltr">SearchResponse</code>
+                                    – what if the message type you want to use as a field type is already defined in
+                                    another <code translate="no" dir="ltr">.proto</code> file?</p>
+
+                                <p>You can use definitions from other <code translate="no" dir="ltr">.proto</code> files
+                                    by <em>importing</em> them. To import another <code translate="no"
+                                        dir="ltr">.proto</code>&#39;s definitions, you add an import statement to the
+                                    top of your file:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no"
+                                    dir="ltr">import "myproject/other_protos.proto";</pre>
+
+                                <p>By default you can only use definitions from directly imported <code translate="no"
+                                        dir="ltr">.proto</code> files. However, sometimes you may need to move a <code
+                                        translate="no" dir="ltr">.proto</code> file to a new location. Instead of moving
+                                    the <code translate="no" dir="ltr">.proto</code> file directly and updating all the
+                                    call sites in a single change, now you can put a dummy <code translate="no"
+                                        dir="ltr">.proto</code> file in the old location to forward all the imports to
+                                    the new location using the <code translate="no" dir="ltr">import public</code>
+                                    notion. <code translate="no" dir="ltr">import public</code> dependencies can be
+                                    transitively relied upon by anyone importing the proto containing the <code
+                                        translate="no" dir="ltr">import public</code> statement. For example:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+// new.proto
+// All definitions are moved here
+</pre>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+// old.proto
+// This is the proto that all clients are importing.
+import public "new.proto";
+import "other.proto";
+</pre>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+// client.proto
+import "old.proto";
+// You use definitions from old.proto and new.proto, but not other.proto
+</pre>
+
+                                <p>The protocol compiler searches for imported files in a set of directories specified
+                                    on the protocol compiler command line using the <code translate="no"
+                                        dir="ltr">-I</code>/<code translate="no" dir="ltr">--proto_path</code> flag. If
+                                    no flag was given, it looks in the directory in which the compiler was invoked. In
+                                    general you should set the <code translate="no" dir="ltr">--proto_path</code> flag
+                                    to the root of your project and use fully qualified names for all imports.</p>
+
+                                <h3 id="using_proto3_message_types" data-text="Using proto3 Message Types" tabindex="0">
+                                    Using proto3 Message Types</h3>
+
+                                <p>It&#39;s possible to import <a href="/protocol-buffers/docs/proto3">proto3</a>
+                                    message types and use them in your proto2 messages, and vice versa. However, proto2
+                                    enums cannot be used in proto3 syntax.</p>
+
+                                <h2 id="nested" data-text="Nested Types" tabindex="0">Nested Types</h2>
+
+                                <p>You can define and use message types inside other message types, as in the following
+                                    example – here the <code translate="no" dir="ltr">Result</code> message is defined
+                                    inside the <code translate="no" dir="ltr">SearchResponse</code> message:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message SearchResponse {
+  message Result {
+    required string url = 1;
+    optional string title = 2;
+    repeated string snippets = 3;
+  }
+  repeated Result result = 1;
+}
+</pre>
+
+                                <p>If you want to reuse this message type outside its parent message type, you refer to
+                                    it as <code translate="no" dir="ltr">_Parent_._Type_</code>:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message SomeOtherMessage {
+  optional SearchResponse.Result result = 1;
+}
+</pre>
+
+                                <p>You can nest messages as deeply as you like:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message Outer {       // Level 0
+  message MiddleAA {  // Level 1
+    message Inner {   // Level 2
+      required int64 ival = 1;
+      optional bool  booly = 2;
+    }
+  }
+  message MiddleBB {  // Level 1
+    message Inner {   // Level 2
+      required int32 ival = 1;
+      optional bool  booly = 2;
+    }
+  }
+}
+</pre>
+
+                                <h3 id="groups" data-text="Groups" tabindex="0">Groups</h3>
+
+                                <p><strong>Note that this feature is deprecated and should not be used when creating new
+                                        message types – use nested message types instead.</strong></p>
+
+                                <p>Groups are another way to nest information in your message definitions. For example,
+                                    another way to specify a <code translate="no" dir="ltr">SearchResponse</code>
+                                    containing a number of <code translate="no" dir="ltr">Result</code>s is as follows:
+                                </p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message SearchResponse {
+  repeated group Result = 1 {
+    required string url = 2;
+    optional string title = 3;
+    repeated string snippets = 4;
+  }
+}</pre>
+
+                                <p>A group simply combines a nested message type and a field into a single declaration.
+                                    In your code, you can treat this message just as if it had a <code translate="no"
+                                        dir="ltr">Result</code> type field called <code translate="no"
+                                        dir="ltr">result</code> (the latter name is converted to lower-case so that it
+                                    does not conflict with the former). Therefore, this example is exactly equivalent to
+                                    the <code translate="no" dir="ltr">SearchResponse</code> above, except that the
+                                    message has a different <a href="/protocol-buffers/docs/encoding">wire format</a>.
+                                </p>
+
+                                <h2 id="updating" data-text="Updating A Message Type" tabindex="0">Updating A Message
+                                    Type</h2>
+
+                                <p>If an existing message type no longer meets all your needs – for example, you&#39;d
+                                    like the message format to have an extra field – but you&#39;d still like to use
+                                    code created with the old format, don&#39;t worry! It&#39;s very simple to update
+                                    message types without breaking any of your existing code. Just remember the
+                                    following rules:</p>
+
+                                <ul>
+                                    <li>Don&#39;t change the field numbers for any existing fields.</li>
+                                    <li>Any new fields that you add should be <code translate="no"
+                                            dir="ltr">optional</code> or <code translate="no" dir="ltr">repeated</code>.
+                                        This means that any messages serialized by code using your &quot;old&quot;
+                                        message format can be parsed by your new generated code, as they won&#39;t be
+                                        missing any <code translate="no" dir="ltr">required</code> elements. You should
+                                        set up sensible <a href="#optional">default values</a> for these elements so
+                                        that new code can properly interact with messages generated by old code.
+                                        Similarly, messages created by your new code can be parsed by your old code: old
+                                        binaries simply ignore the new field when parsing. However, the unknown fields
+                                        are not discarded, and if the message is later serialized, the unknown fields
+                                        are serialized along with it – so if the message is passed on to new code, the
+                                        new fields are still available.</li>
+                                    <li>Non-required fields can be removed, as long as the field number is not used
+                                        again in your updated message type. You may want to rename the field instead,
+                                        perhaps adding the prefix &quot;OBSOLETE_&quot;, or make the field number <a
+                                            href="#reserved">reserved</a>, so that future users of your <code
+                                            translate="no" dir="ltr">.proto</code> can&#39;t accidentally reuse the
+                                        number.</li>
+                                    <li>A non-required field can be converted to an <a href="#extensions">extension</a>
+                                        and vice versa, as long as the type and number stay the same.</li>
+                                    <li><code translate="no" dir="ltr">int32</code>, <code translate="no"
+                                            dir="ltr">uint32</code>, <code translate="no" dir="ltr">int64</code>, <code
+                                            translate="no" dir="ltr">uint64</code>, and <code translate="no"
+                                            dir="ltr">bool</code> are all compatible – this means you can change a field
+                                        from one of these types to another without breaking forwards- or
+                                        backwards-compatibility. If a number is parsed from the wire which doesn&#39;t
+                                        fit in the corresponding type, you will get the same effect as if you had cast
+                                        the number to that type in C++ (e.g. if a 64-bit number is read as an int32, it
+                                        will be truncated to 32 bits).</li>
+                                    <li><code translate="no" dir="ltr">sint32</code> and <code translate="no"
+                                            dir="ltr">sint64</code> are compatible with each other but are <em>not</em>
+                                        compatible with the other integer types.</li>
+                                    <li><code translate="no" dir="ltr">string</code> and <code translate="no"
+                                            dir="ltr">bytes</code> are compatible as long as the bytes are valid UTF-8.
+                                    </li>
+                                    <li>Embedded messages are compatible with <code translate="no"
+                                            dir="ltr">bytes</code> if the bytes contain an encoded version of the
+                                        message.</li>
+                                    <li><code translate="no" dir="ltr">fixed32</code> is compatible with <code
+                                            translate="no" dir="ltr">sfixed32</code>, and <code translate="no"
+                                            dir="ltr">fixed64</code> with <code translate="no"
+                                            dir="ltr">sfixed64</code>.</li>
+                                    <li>For <code translate="no" dir="ltr">string</code>, <code translate="no"
+                                            dir="ltr">bytes</code>, and message fields, <code translate="no"
+                                            dir="ltr">optional</code> is compatible with <code translate="no"
+                                            dir="ltr">repeated</code>. Given serialized data of a repeated field as
+                                        input, clients that expect this field to be <code translate="no"
+                                            dir="ltr">optional</code> will take the last input value if it&#39;s a
+                                        primitive type field or merge all input elements if it&#39;s a message type
+                                        field. Note that this is <strong>not</strong> generally safe for numeric types,
+                                        including bools and enums. Repeated fields of numeric types can be serialized in
+                                        the <a href="/protocol-buffers/docs/encoding#packed">packed</a> format, which
+                                        will not be parsed correctly when an <code translate="no"
+                                            dir="ltr">optional</code> field is expected.</li>
+                                    <li>Changing a default value is generally OK, as long as you remember that default
+                                        values are never sent over the wire. Thus, if a program receives a message in
+                                        which a particular field isn&#39;t set, the program will see the default value
+                                        as it was defined in that program&#39;s version of the protocol. It will NOT see
+                                        the default value that was defined in the sender&#39;s code.</li>
+                                    <li><code translate="no" dir="ltr">enum</code> is compatible with <code
+                                            translate="no" dir="ltr">int32</code>, <code translate="no"
+                                            dir="ltr">uint32</code>, <code translate="no" dir="ltr">int64</code>, and
+                                        <code translate="no" dir="ltr">uint64</code> in terms of wire format (note that
+                                        values will be truncated if they don&#39;t fit), but be aware that client code
+                                        may treat them differently when the message is deserialized. Notably,
+                                        unrecognized <code translate="no" dir="ltr">enum</code> values are discarded
+                                        when the message is deserialized, which makes the field&#39;s <code
+                                            translate="no" dir="ltr">has..</code> accessor return false and its getter
+                                        return the first value listed in the <code translate="no" dir="ltr">enum</code>
+                                        definition, or the default value if one is specified. In the case of repeated
+                                        enum fields, any unrecognized values are stripped out of the list. However, an
+                                        integer field will always preserve its value. Because of this, you need to be
+                                        very careful when upgrading an integer to an <code translate="no"
+                                            dir="ltr">enum</code> in terms of receiving out of bounds enum values on the
+                                        wire.</li>
+                                    <li>In the current Java and C++ implementations, when unrecognized <code
+                                            translate="no" dir="ltr">enum</code> values are stripped out, they are
+                                        stored along with other unknown fields. Note that this can result in strange
+                                        behavior if this data is serialized and then reparsed by a client that
+                                        recognizes these values. In the case of optional fields, even if a new value was
+                                        written after the original message was deserialized, the old value will be still
+                                        read by clients that recognize it. In the case of repeated fields, the old
+                                        values will appear after any recognized and newly-added values, which means that
+                                        order will not be preserved.</li>
+                                    <li>Changing a single <code translate="no" dir="ltr">optional</code> value into a
+                                        member of a <strong>new</strong> <code translate="no" dir="ltr">oneof</code> is
+                                        safe and binary compatible. Moving multiple <code translate="no"
+                                            dir="ltr">optional</code> fields into a new <code translate="no"
+                                            dir="ltr">oneof</code> may be safe if you are sure that no code sets more
+                                        than one at a time. Moving any fields into an existing <code translate="no"
+                                            dir="ltr">oneof</code> is not safe.</li>
+                                    <li>Changing a field between a <code translate="no" dir="ltr">map&lt;K, V&gt;</code>
+                                        and the corresponding <code translate="no" dir="ltr">repeated</code> message
+                                        field is binary compatible (see <a href="#maps">Maps</a>, below, for the message
+                                        layout and other restrictions). However, the safety of the change is
+                                        application-dependent: when deserializing and reserializing a message, clients
+                                        using the <code translate="no" dir="ltr">repeated</code> field definition will
+                                        produce a semantically identical result; however, clients using the <code
+                                            translate="no" dir="ltr">map</code> field definition may reorder entries and
+                                        drop entries with duplicate keys.</li>
+                                </ul>
+
+                                <h2 id="extensions" data-text="Extensions" tabindex="0">Extensions</h2>
+
+                                <p>Extensions let you declare that a range of field numbers in a message are available
+                                    for third-party extensions. An extension is a placeholder for a field whose type is
+                                    not defined by the original <code translate="no" dir="ltr">.proto</code> file. This
+                                    allows other <code translate="no" dir="ltr">.proto</code> files to add to your
+                                    message definition by defining the types of some or all of the fields with those
+                                    field numbers. Let&#39;s look at an example:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message Foo {
+  // ...
+  extensions 100 to 199;
+}
+</pre>
+
+                                <p>This says that the range of field numbers [100, 199] in <code translate="no"
+                                        dir="ltr">Foo</code> is reserved for extensions. Other users can now add new
+                                    fields to <code translate="no" dir="ltr">Foo</code> in their own <code
+                                        translate="no" dir="ltr">.proto</code> files that import your <code
+                                        translate="no" dir="ltr">.proto</code>, using field numbers within your
+                                    specified range – for example:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+extend Foo {
+  optional int32 bar = 126;
+}</pre>
+
+                                <p>This adds a field named <code translate="no" dir="ltr">bar</code> with the field
+                                    number 126 to the original definition of <code translate="no" dir="ltr">Foo</code>.
+                                </p>
+
+                                <p>When your user&#39;s <code translate="no" dir="ltr">Foo</code> messages are encoded,
+                                    the wire format is exactly the same as if the user defined the new field inside
+                                    <code translate="no" dir="ltr">Foo</code>. However, the way you access extension
+                                    fields in your application code is slightly different to accessing regular fields –
+                                    your generated data access code has special accessors for working with extensions.
+                                    So, for example, here&#39;s how you set the value of <code translate="no"
+                                        dir="ltr">bar</code> in C++:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">Foo foo;
+foo.SetExtension(bar, 15);
+</pre>
+
+                                <p>Similarly, the <code translate="no" dir="ltr">Foo</code> class defines templated
+                                    accessors <code translate="no" dir="ltr">HasExtension()</code>, <code translate="no"
+                                        dir="ltr">ClearExtension()</code>, <code translate="no"
+                                        dir="ltr">GetExtension()</code>, <code translate="no"
+                                        dir="ltr">MutableExtension()</code>, and <code translate="no"
+                                        dir="ltr">AddExtension()</code>. All have semantics matching the corresponding
+                                    generated accessors for a normal field. For more information about working with
+                                    extensions, see the generated code reference for your chosen language.</p>
+
+                                <p>Note that extensions can be of any field type, including message types, but cannot be
+                                    oneofs or maps.</p>
+
+                                <h3 id="nested_extensions" data-text="Nested Extensions" tabindex="0">Nested Extensions
+                                </h3>
+
+                                <p>You can declare extensions in the scope of another type:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message Baz {
+  extend Foo {
+    optional int32 bar = 126;
+  }
+  ...
+}</pre>
+
+                                <p>In this case, the C++ code to access this extension is:</p>
+
+                                <pre lang="cpp" translate="no" dir="ltr">
+Foo foo;
+foo.SetExtension(Baz::bar, 15);</pre>
+
+                                <p>In other words, the only effect is that <code translate="no" dir="ltr">bar</code> is
+                                    defined within the scope of <code translate="no" dir="ltr">Baz</code>.</p>
+
+                                <p>This is a common source of confusion: Declaring an <code translate="no"
+                                        dir="ltr">extend</code> block nested inside a message type <em>does not</em>
+                                    imply any relationship between the outer type and the extended type. In particular,
+                                    the above example <em>does not</em> mean that <code translate="no"
+                                        dir="ltr">Baz</code> is any sort of subclass of <code translate="no"
+                                        dir="ltr">Foo</code>. All it means is that the symbol <code translate="no"
+                                        dir="ltr">bar</code> is declared inside the scope of <code translate="no"
+                                        dir="ltr">Baz</code>; it&#39;s simply a static member.</p>
+
+                                <p>A common pattern is to define extensions inside the scope of the extension&#39;s
+                                    field type – for example, here&#39;s an extension to <code translate="no"
+                                        dir="ltr">Foo</code> of type <code translate="no" dir="ltr">Baz</code>, where
+                                    the extension is defined as part of <code translate="no" dir="ltr">Baz</code>:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message Baz {
+  extend Foo {
+    optional Baz foo_ext = 127;
+  }
+  ...
+}</pre>
+
+                                <p>However, there is no requirement that an extension with a message type be defined
+                                    inside that type. You can also do this:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message Baz {
+  ...
+}
+
+// This can even be in a different file.
+extend Foo {
+  optional Baz foo_baz_ext = 127;
+}
+</pre>
+
+                                <p>In fact, this syntax may be preferred to avoid confusion. As mentioned above, the
+                                    nested syntax is often mistaken for subclassing by users who are not already
+                                    familiar with extensions.</p>
+
+                                <h3 id="choosing_extension_numbers" data-text="Choosing Extension Numbers" tabindex="0">
+                                    Choosing Extension Numbers</h3>
+
+                                <p>It&#39;s very important to make sure that two users don&#39;t add extensions to the
+                                    same message type using the same field number – data corruption can result if an
+                                    extension is accidentally interpreted as the wrong type. You may want to consider
+                                    defining an extension numbering convention for your project to prevent this
+                                    happening.</p>
+
+                                <p>If your numbering convention might involve extensions having very large field
+                                    numbers, you can specify that your extension range goes up to the maximum possible
+                                    field number using the <code translate="no" dir="ltr">max</code> keyword:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message Foo {
+  extensions 1000 to max;
+}</pre>
+
+                                <p><code translate="no" dir="ltr">max</code> is 2<sup>29</sup> - 1, or 536,870,911.</p>
+
+                                <p>As when choosing field numbers in general, your numbering convention also needs to
+                                    avoid field numbers 19000 though 19999 (<code translate="no"
+                                        dir="ltr">FieldDescriptor::kFirstReservedNumber</code> through <code
+                                        translate="no" dir="ltr">FieldDescriptor::kLastReservedNumber</code>), as they
+                                    are reserved for the Protocol Buffers implementation. You can define an extension
+                                    range that includes this range, but the protocol compiler will not allow you to
+                                    define actual extensions with these numbers.</p>
+
+                                <h2 id="oneof" data-text="Oneof" tabindex="0">Oneof</h2>
+
+                                <p>If you have a message with many optional fields and where at most one field will be
+                                    set at the same time, you can enforce this behavior and save memory by using the
+                                    oneof feature.</p>
+
+                                <p>Oneof fields are like optional fields except all the fields in a oneof share memory,
+                                    and at most one field can be set at the same time. Setting any member of the oneof
+                                    automatically clears all the other members. You can check which value in a oneof is
+                                    set (if any) using a special <code translate="no" dir="ltr">case()</code> or <code
+                                        translate="no" dir="ltr">WhichOneof()</code> method, depending on your chosen
+                                    language.</p>
+
+                                <h3 id="using_oneof" data-text="Using Oneof" tabindex="0">Using Oneof</h3>
+
+                                <p>To define a oneof in your <code translate="no" dir="ltr">.proto</code> you use the
+                                    <code translate="no" dir="ltr">oneof</code> keyword followed by your oneof name, in
+                                    this case <code translate="no" dir="ltr">test_oneof</code>:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message SampleMessage {
+  oneof test_oneof {
+     string name = 4;
+     SubMessage sub_message = 9;
+  }
+}</pre>
+
+                                <p>You then add your oneof fields to the oneof definition. You can add fields of any
+                                    type, but cannot use the <code translate="no" dir="ltr">required</code>, <code
+                                        translate="no" dir="ltr">optional</code>, or <code translate="no"
+                                        dir="ltr">repeated</code> keywords. If you need to add a repeated field to a
+                                    oneof, you can use a message containing the repeated field.</p>
+
+                                <p>In your generated code, oneof fields have the same getters and setters as regular
+                                    <code translate="no" dir="ltr">optional</code> methods. You also get a special
+                                    method for checking which value (if any) in the oneof is set. You can find out more
+                                    about the oneof API for your chosen language in the relevant <a
+                                        href="/protocol-buffers/docs/reference/overview">API reference</a>.</p>
+
+                                <h3 id="oneof_features" data-text="Oneof Features" tabindex="0">Oneof Features</h3>
+
+                                <ul>
+                                    <li>
+                                        <p>Setting a oneof field will automatically clear all other members of the
+                                            oneof. So if you set several oneof fields, only the <em>last</em> field you
+                                            set will still have a value.</p>
+
+                                        <pre class="prettyprint lang-proto" translate="no" dir="ltr">SampleMessage message;
+message.set_name("name");
+CHECK(message.has_name());
+message.mutable_sub_message();   // Will clear name field.
+CHECK(!message.has_name());</pre>
+                                    </li>
+                                    <li>
+                                        <p>If the parser encounters multiple members of the same oneof on the wire, only
+                                            the last member seen is used in the parsed message.</p>
+                                    </li>
+                                    <li>
+                                        <p>Extensions are not supported for oneof.</p>
+                                    </li>
+                                    <li>
+                                        <p>A oneof cannot be <code translate="no" dir="ltr">repeated</code>.</p>
+                                    </li>
+                                    <li>
+                                        <p>Reflection APIs work for oneof fields.</p>
+                                    </li>
+                                    <li>
+                                        <p>If you set a oneof field to the default value (such as setting an int32 oneof
+                                            field to 0), the &quot;case&quot; of that oneof field will be set, and the
+                                            value will be serialized on the wire.</p>
+                                    </li>
+                                    <li>
+                                        <p>If you&#39;re using C++, make sure your code doesn&#39;t cause memory
+                                            crashes. The following sample code will crash because <code translate="no"
+                                                dir="ltr">sub_message</code> was already deleted by calling the <code
+                                                translate="no" dir="ltr">set_name()</code> method.</p>
+
+                                        <pre class="prettyprint lang-proto" translate="no" dir="ltr">SampleMessage message;
+SubMessage* sub_message = message.mutable_sub_message();
+message.set_name("name");      // Will delete sub_message
+sub_message->set_...            // Crashes here</pre>
+                                    </li>
+                                    <li>
+                                        <p>Again in C++, if you <code translate="no" dir="ltr">Swap()</code> two
+                                            messages with oneofs, each message will end up with the other’s oneof case:
+                                            in the example below, <code translate="no" dir="ltr">msg1</code> will have a
+                                            <code translate="no" dir="ltr">sub_message</code> and <code translate="no"
+                                                dir="ltr">msg2</code> will have a <code translate="no"
+                                                dir="ltr">name</code>.</p>
+
+                                        <pre class="prettyprint lang-proto" translate="no" dir="ltr">SampleMessage msg1;
+msg1.set_name("name");
+SampleMessage msg2;
+msg2.mutable_sub_message();
+msg1.swap(&msg2);
+CHECK(msg1.has_sub_message());
+CHECK(msg2.has_name());</pre>
+                                    </li>
+                                </ul>
+
+                                <h3 id="backwards-compatibility_issues" data-text="Backwards-compatibility issues"
+                                    tabindex="0">Backwards-compatibility issues</h3>
+
+                                <p>Be careful when adding or removing oneof fields. If checking the value of a oneof
+                                    returns <code translate="no" dir="ltr">None</code>/<code translate="no"
+                                        dir="ltr">NOT_SET</code>, it could mean that the oneof has not been set or it
+                                    has been set to a field in a different version of the oneof. There is no way to tell
+                                    the difference, since there&#39;s no way to know if an unknown field on the wire is
+                                    a member of the oneof.</p>
+
+                                <h4 id="tag_reuse_issues" data-text="Tag Reuse Issues" tabindex="0">Tag Reuse Issues
+                                </h4>
+
+                                <ul>
+                                    <li><strong>Move optional fields into or out of a oneof</strong>: You may lose some
+                                        of your information (some fields will be cleared) after the message is
+                                        serialized and parsed. However, you can safely move a single field into a
+                                        <strong>new</strong> oneof and may be able to move multiple fields if it is
+                                        known that only one is ever set.</li>
+                                    <li><strong>Delete a oneof field and add it back</strong>: This may clear your
+                                        currently set oneof field after the message is serialized and parsed.</li>
+                                    <li><strong>Split or merge oneof</strong>: This has similar issues to moving regular
+                                        <code translate="no" dir="ltr">optional</code> fields.</li>
+                                </ul>
+
+                                <h2 id="maps" data-text="Maps" tabindex="0">Maps</h2>
+
+                                <p>If you want to create an associative map as part of your data definition, protocol
+                                    buffers provides a handy shortcut syntax:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">map&lt;key_type, value_type&gt; map_field = N;
+</pre>
+
+                                <p>...where the <code translate="no" dir="ltr">key_type</code> can be any integral or
+                                    string type (so, any <a href="#scalar">scalar</a> type except for floating point
+                                    types and <code translate="no" dir="ltr">bytes</code>). Note that enum is not a
+                                    valid <code translate="no" dir="ltr">key_type</code>. The <code translate="no"
+                                        dir="ltr">value_type</code> can be any type except another map.</p>
+
+                                <p>So, for example, if you wanted to create a map of projects where each <code
+                                        translate="no" dir="ltr">Project</code> message is associated with a string key,
+                                    you could define it like this:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">map&lt;string, Project&gt; projects = 3;
+</pre>
+
+                                <p>The generated map API is currently available for all proto2 supported languages. You
+                                    can find out more about the map API for your chosen language in the relevant <a
+                                        href="/protocol-buffers/docs/reference/overview">API reference</a>.</p>
+
+                                <h3 id="maps_features" data-text="Maps Features" tabindex="0">Maps Features</h3>
+
+                                <ul>
+                                    <li>Extensions are not supported for maps.</li>
+                                    <li>Maps cannot be <code translate="no" dir="ltr">repeated</code>, <code
+                                            translate="no" dir="ltr">optional</code>, or <code translate="no"
+                                            dir="ltr">required</code>.</li>
+                                    <li>Wire format ordering and map iteration ordering of map values is undefined, so
+                                        you cannot rely on your map items being in a particular order.</li>
+                                    <li>When generating text format for a <code translate="no" dir="ltr">.proto</code>,
+                                        maps are sorted by key. Numeric keys are sorted numerically.</li>
+                                    <li>When parsing from the wire or when merging, if there are duplicate map keys the
+                                        last key seen is used. When parsing a map from text format, parsing may fail if
+                                        there are duplicate keys.</li>
+                                </ul>
+
+                                <h3 id="backwards_compatibility" data-text="Backwards compatibility" tabindex="0">
+                                    Backwards compatibility</h3>
+
+                                <p>The map syntax is equivalent to the following on the wire, so protocol buffers
+                                    implementations that do not support maps can still handle your data:</p>
+
+                                <pre class="prettyprint" class="prettyprint lang-proto" translate="no" dir="ltr">message MapFieldEntry {
+  optional key_type key = 1;
+  optional value_type value = 2;
+}
+
+repeated MapFieldEntry map_field = N;
+</pre>
+
+                                <p>Any protocol buffers implementation that supports maps must both produce and accept
+                                    data that can be accepted by the above definition.</p>
+
+                                <h2 id="packages" data-text="Packages" tabindex="0">Packages</h2>
+
+                                <p>You can add an optional <code translate="no" dir="ltr">package</code> specifier to a
+                                    <code translate="no" dir="ltr">.proto</code> file to prevent name clashes between
+                                    protocol message types.</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+package foo.bar;
+message Open { ... }</pre>
+
+                                <p>You can then use the package specifier when defining fields of your message type:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message Foo {
+  ...
+  required foo.bar.Open open = 1;
+  ...
+}</pre>
+
+                                <p>The way a package specifier affects the generated code depends on your chosen
+                                    language:</p>
+
+                                <ul>
+                                    <li>In <strong>C++</strong> the generated classes are wrapped inside a C++
+                                        namespace. For example, <code translate="no" dir="ltr">Open</code> would be in
+                                        the namespace <code translate="no" dir="ltr">foo::bar</code>.</li>
+                                    <li>In <strong>Java</strong>, the package is used as the Java package, unless you
+                                        explicitly provide a <code translate="no" dir="ltr">option java_package</code>
+                                        in your <code translate="no" dir="ltr">.proto</code> file.</li>
+                                    <li>In <strong>Python</strong>, the <code translate="no" dir="ltr">package</code>
+                                        directive is ignored, since Python modules are organized according to their
+                                        location in the file system.</li>
+                                    <li>In <strong>Go</strong>, the <code translate="no" dir="ltr">package</code>
+                                        directive is ignored, and the generated <code translate="no"
+                                            dir="ltr">.pb.go</code> file is in the package named after the corresponding
+                                        <code translate="no" dir="ltr">go_proto_library</code> rule.</li>
+                                </ul>
+
+                                <p>Note that even when the <code translate="no" dir="ltr">package</code> directive does
+                                    not directly affect the generated code, for example in Python, it is still strongly
+                                    recommended to specify the package for the <code translate="no"
+                                        dir="ltr">.proto</code> file, as otherwise it may lead to naming conflicts in
+                                    descriptors and make the proto not portable for other languages.</p>
+
+                                <h3 id="packages_and_name_resolution" data-text="Packages and Name Resolution"
+                                    tabindex="0">Packages and Name Resolution</h3>
+
+                                <p>Type name resolution in the protocol buffer language works like C++: first the
+                                    innermost scope is searched, then the next-innermost, and so on, with each package
+                                    considered to be &quot;inner&quot; to its parent package. A leading &#39;.&#39; (for
+                                    example, <code translate="no" dir="ltr">.foo.bar.Baz</code>) means to start from the
+                                    outermost scope instead.</p>
+
+                                <p>The protocol buffer compiler resolves all type names by parsing the imported <code
+                                        translate="no" dir="ltr">.proto</code> files. The code generator for each
+                                    language knows how to refer to each type in that language, even if it has different
+                                    scoping rules.</p>
+
+                                <h2 id="services" data-text="Defining Services" tabindex="0">Defining Services</h2>
+
+                                <p>If you want to use your message types with an RPC (Remote Procedure Call) system, you
+                                    can define an RPC service interface in a <code translate="no"
+                                        dir="ltr">.proto</code> file and the protocol buffer compiler will generate
+                                    service interface code and stubs in your chosen language. So, for example, if you
+                                    want to define an RPC service with a method that takes your <code translate="no"
+                                        dir="ltr">SearchRequest</code> and returns a <code translate="no"
+                                        dir="ltr">SearchResponse</code>, you can define it in your <code translate="no"
+                                        dir="ltr">.proto</code> file as follows:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+service SearchService {
+  rpc Search(SearchRequest) returns (SearchResponse);
+}</pre>
+
+                                <p>By default, the protocol compiler will then generate an abstract interface called
+                                    <code translate="no" dir="ltr">SearchService</code> and a corresponding
+                                    &quot;stub&quot; implementation. The stub forwards all calls to an <code
+                                        translate="no" dir="ltr">RpcChannel</code>, which in turn is an abstract
+                                    interface that you must define yourself in terms of your own RPC system. For
+                                    example, you might implement an <code translate="no" dir="ltr">RpcChannel</code>
+                                    which serializes the message and sends it to a server via HTTP. In other words, the
+                                    generated stub provides a type-safe interface for making protocol-buffer-based RPC
+                                    calls, without locking you into any particular RPC implementation. So, in C++, you
+                                    might end up with code like this:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+using google::protobuf;
+
+protobuf::RpcChannel* channel;
+protobuf::RpcController* controller;
+SearchService* service;
+SearchRequest request;
+SearchResponse response;
+
+void DoSearch() {
+  // You provide classes MyRpcChannel and MyRpcController, which implement
+  // the abstract interfaces protobuf::RpcChannel and protobuf::RpcController.
+  channel = new MyRpcChannel("somehost.example.com:1234");
+  controller = new MyRpcController;
+
+  // The protocol compiler generates the SearchService class based on the
+  // definition given above.
+  service = new SearchService::Stub(channel);
+
+  // Set up the request.
+  request.set_query("protocol buffers");
+
+  // Execute the RPC.
+  service->Search(controller, request, response, protobuf::NewCallback(&Done));
+}
+
+void Done() {
+  delete service;
+  delete channel;
+  delete controller;
+}
+</pre>
+
+                                <p>All service classes also implement the <code translate="no" dir="ltr">Service</code>
+                                    interface, which provides a way to call specific methods without knowing the method
+                                    name or its input and output types at compile time. On the server side, this can be
+                                    used to implement an RPC server with which you could register services.</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+using google::protobuf;
+
+class ExampleSearchService : public SearchService {
+ public:
+  void Search(protobuf::RpcController* controller,
+              const SearchRequest* request,
+              SearchResponse* response,
+              protobuf::Closure* done) {
+    if (request->query() == "google") {
+      response->add_result()->set_url("http://www.google.com");
+    } else if (request->query() == "protocol buffers") {
+      response->add_result()->set_url("http://protobuf.googlecode.com");
+    }
+    done->Run();
+  }
+};
+
+int main() {
+  // You provide class MyRpcServer.  It does not have to implement any
+  // particular interface; this is just an example.
+  MyRpcServer server;
+
+  protobuf::Service* service = new ExampleSearchService;
+  server.ExportOnPort(1234, service);
+  server.Run();
+
+  delete service;
+  return 0;
+}
+</pre>
+
+                                <p>If you don&#39;t want to plug in your own existing RPC system, you can now use <a
+                                        href="https://github.com/grpc/grpc-common">gRPC</a>: a language- and
+                                    platform-neutral open source RPC system developed at Google. gRPC works particularly
+                                    well with protocol buffers and lets you generate the relevant RPC code directly from
+                                    your <code translate="no" dir="ltr">.proto</code> files using a special protocol
+                                    buffer compiler plugin. However, as there are potential compatibility issues between
+                                    clients and servers generated with proto2 and proto3, we recommend that you use
+                                    proto3 for defining gRPC services. You can find out more about proto3 syntax in the
+                                    <a href="/protocol-buffers/docs/proto3">Proto3 Language Guide</a>. If you do want to
+                                    use proto2 with gRPC, you need to use version 3.0.0 or higher of the protocol
+                                    buffers compiler and libraries.</p>
+
+                                <p>In addition to gRPC, there are also a number of ongoing third-party projects to
+                                    develop RPC implementations for Protocol Buffers. For a list of links to projects we
+                                    know about, see the <a
+                                        href="https://github.com/protocolbuffers/protobuf/blob/master/docs/third_party.md">third-party
+                                        add-ons wiki page</a>.</p>
+
+                                <h2 id="options" data-text="Options" tabindex="0">Options</h2>
+
+                                <p>Individual declarations in a <code translate="no" dir="ltr">.proto</code> file can be
+                                    annotated with a number of <em>options</em>. Options do not change the overall
+                                    meaning of a declaration, but may affect the way it is handled in a particular
+                                    context. The complete list of available options is defined in <code translate="no"
+                                        dir="ltr">google/protobuf/descriptor.proto</code>.</p>
+
+                                <p>Some options are file-level options, meaning they should be written at the top-level
+                                    scope, not inside any message, enum, or service definition. Some options are
+                                    message-level options, meaning they should be written inside message definitions.
+                                    Some options are field-level options, meaning they should be written inside field
+                                    definitions. Options can also be written on enum types, enum values, oneof fields,
+                                    service types, and service methods; however, no useful options currently exist for
+                                    any of these.</p>
+
+                                <p>Here are a few of the most commonly used options:</p>
+
+                                <ul>
+                                    <li>
+                                        <p><code translate="no" dir="ltr">java_package</code> (file option): The package
+                                            you want to use for your generated Java classes. If no explicit <code
+                                                translate="no" dir="ltr">java_package</code> option is given in the
+                                            <code translate="no" dir="ltr">.proto</code> file, then by default the proto
+                                            package (specified using the &quot;package&quot; keyword in the <code
+                                                translate="no" dir="ltr">.proto</code> file) will be used. However,
+                                            proto packages generally do not make good Java packages since proto packages
+                                            are not expected to start with reverse domain names. If not generating Java
+                                            code, this option has no effect.</p>
+
+                                        <pre class="prettyprint lang-proto" translate="no"
+                                            dir="ltr">option java_package = "com.example.foo";</pre>
+                                    </li>
+                                    <li>
+                                        <p><code translate="no" dir="ltr">java_outer_classname</code> (file option): The
+                                            class name for the outermost Java class (and hence the file name) you want
+                                            to generate. If no explicit <code translate="no"
+                                                dir="ltr">java_outer_classname</code> is specified in the <code
+                                                translate="no" dir="ltr">.proto</code> file, the class name will be
+                                            constructed by converting the <code translate="no" dir="ltr">.proto</code>
+                                            file name to camel-case (so <code translate="no"
+                                                dir="ltr">foo_bar.proto</code> becomes <code translate="no"
+                                                dir="ltr">FooBar.java</code>). If not generating Java code, this option
+                                            has no effect.</p>
+
+                                        <pre class="prettyprint lang-proto" translate="no"
+                                            dir="ltr">option java_outer_classname = "Ponycopter";</pre>
+                                    </li>
+                                    <li>
+                                        <p><code translate="no" dir="ltr">optimize_for</code> (file option): Can be set
+                                            to <code translate="no" dir="ltr">SPEED</code>, <code translate="no"
+                                                dir="ltr">CODE_SIZE</code>, or <code translate="no"
+                                                dir="ltr">LITE_RUNTIME</code>. This affects the C++ and Java code
+                                            generators (and possibly third-party generators) in the following ways:</p>
+
+                                        <ul>
+                                            <li><code translate="no" dir="ltr">SPEED</code> (default): The protocol
+                                                buffer compiler will generate code for serializing, parsing, and
+                                                performing other common operations on your message types. This code is
+                                                highly optimized.</li>
+                                            <li><code translate="no" dir="ltr">CODE_SIZE</code>: The protocol buffer
+                                                compiler will generate minimal classes and will rely on shared,
+                                                reflection-based code to implement serialialization, parsing, and
+                                                various other operations. The generated code will thus be much smaller
+                                                than with <code translate="no" dir="ltr">SPEED</code>, but operations
+                                                will be slower. Classes will still implement exactly the same public API
+                                                as they do in <code translate="no" dir="ltr">SPEED</code> mode. This
+                                                mode is most useful in apps that contain a very large number <code
+                                                    translate="no" dir="ltr">.proto</code> files and do not need all of
+                                                them to be blindingly fast.</li>
+                                            <li><code translate="no" dir="ltr">LITE_RUNTIME</code>: The protocol buffer
+                                                compiler will generate classes that depend only on the &quot;lite&quot;
+                                                runtime library (<code translate="no" dir="ltr">libprotobuf-lite</code>
+                                                instead of <code translate="no" dir="ltr">libprotobuf</code>). The lite
+                                                runtime is much smaller than the full library (around an order of
+                                                magnitude smaller) but omits certain features like descriptors and
+                                                reflection. This is particularly useful for apps running on constrained
+                                                platforms like mobile phones. The compiler will still generate fast
+                                                implementations of all methods as it does in <code translate="no"
+                                                    dir="ltr">SPEED</code> mode. Generated classes will only implement
+                                                the <code translate="no" dir="ltr">MessageLite</code> interface in each
+                                                language, which provides only a subset of the methods of the full <code
+                                                    translate="no" dir="ltr">Message</code> interface.</li>
+                                        </ul>
+
+                                        <pre class="prettyprint lang-proto" translate="no"
+                                            dir="ltr">option optimize_for = CODE_SIZE;</pre>
+                                    </li>
+                                    <li>
+                                        <p><code translate="no" dir="ltr">cc_generic_services</code>, <code
+                                                translate="no" dir="ltr">java_generic_services</code>, <code
+                                                translate="no" dir="ltr">py_generic_services</code> (file options):
+                                            Whether or not the protocol buffer compiler should generate abstract service
+                                            code based on <a href="#services">services definitions</a> in C++, Java, and
+                                            Python, respectively. For legacy reasons, these default to <code
+                                                translate="no" dir="ltr">true</code>. However, as of version 2.3.0
+                                            (January 2010), it is considered preferrable for RPC implementations to
+                                            provide <a
+                                                href="/protocol-buffers/docs/reference/cpp/google.protobuf.compiler.plugin.pb">code
+                                                generator plugins</a> to generate code more specific to each system,
+                                            rather than rely on the &quot;abstract&quot; services.</p>
+
+                                        <pre class="prettyprint lang-proto" translate="no" dir="ltr">// This file relies on plugins to generate service code.
+option cc_generic_services = false;
+option java_generic_services = false;
+option py_generic_services = false;</pre>
+                                    </li>
+                                    <li>
+                                        <p><code translate="no" dir="ltr">cc_enable_arenas</code> (file option): Enables
+                                            <a href="/protocol-buffers/docs/reference/arenas">arena allocation</a> for
+                                            C++ generated code.</p>
+                                    </li>
+                                    <li>
+                                        <p><code translate="no" dir="ltr">message_set_wire_format</code> (message
+                                            option): If set to <code translate="no" dir="ltr">true</code>, the message
+                                            uses a different binary format intended to be compatible with an old format
+                                            used inside Google called <code translate="no" dir="ltr">MessageSet</code>.
+                                            Users outside Google will probably never need to use this option. The
+                                            message must be declared exactly as follows:</p>
+
+                                        <pre class="prettyprint lang-proto" translate="no" dir="ltr">
+message Foo {
+  option message_set_wire_format = true;
+  extensions 4 to max;
+}
+</pre>
+                                    </li>
+                                    <li>
+                                        <p><code translate="no" dir="ltr">packed</code> (field option): If set to <code
+                                                translate="no" dir="ltr">true</code> on a repeated field of a basic
+                                            numeric type, a more compact <a
+                                                href="/protocol-buffers/docs/encoding#packed">encoding</a> is used.
+                                            There is no downside to using this option. However, note that prior to
+                                            version 2.3.0, parsers that received packed data when not expected would
+                                            ignore it. Therefore, it was not possible to change an existing field to
+                                            packed format without breaking wire compatibility. In 2.3.0 and later, this
+                                            change is safe, as parsers for packable fields will always accept both
+                                            formats, but be careful if you have to deal with old programs using old
+                                            protobuf versions.</p>
+
+                                        <pre class="prettyprint lang-proto" translate="no"
+                                            dir="ltr">repeated int32 samples = 4 [packed=true];</pre>
+                                    </li>
+                                    <li>
+                                        <p><code translate="no" dir="ltr">deprecated</code> (field option): If set to
+                                            <code translate="no" dir="ltr">true</code>, indicates that the field is
+                                            deprecated and should not be used by new code. In most languages this has no
+                                            actual effect. In Java, this becomes a <code translate="no"
+                                                dir="ltr">@Deprecated</code> annotation. In the future, other
+                                            language-specific code generators may generate deprecation annotations on
+                                            the field&#39;s accessors, which will in turn cause a warning to be emitted
+                                            when compiling code which attempts to use the field. If the field is not
+                                            used by anyone and you want to prevent new users from using it, consider
+                                            replacing the field declaration with a <a href="#reserved">reserved</a>
+                                            statement.</p>
+
+                                        <pre class="prettyprint lang-proto" translate="no"
+                                            dir="ltr">optional int32 old_field = 6 [deprecated=true];</pre>
+                                    </li>
+                                </ul>
+
+                                <h3 id="customoptions" data-text="Custom Options" tabindex="0">Custom Options</h3>
+
+                                <p>Protocol Buffers even allow you to define and use your own options. Note that this is
+                                    an <strong>advanced feature</strong> which most people don&#39;t need. Since options
+                                    are defined by the messages defined in <code translate="no"
+                                        dir="ltr">google/protobuf/descriptor.proto</code> (like <code translate="no"
+                                        dir="ltr">FileOptions</code> or <code translate="no"
+                                        dir="ltr">FieldOptions</code>), defining your own options is simply a matter of
+                                    <a href="#extensions">extending</a> those messages. For example:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">import "google/protobuf/descriptor.proto";
+
+extend google.protobuf.MessageOptions {
+  optional string my_option = 51234;
+}
+
+message MyMessage {
+  option (my_option) = "Hello world!";
+}
+</pre>
+
+                                <p>Here we have defined a new message-level option by extending <code translate="no"
+                                        dir="ltr">MessageOptions</code>. When we then use the option, the option name
+                                    must be enclosed in parentheses to indicate that it is an extension. We can now read
+                                    the value of <code translate="no" dir="ltr">my_option</code> in C++ like so:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">string value = MyMessage::descriptor()->options().GetExtension(my_option);
+</pre>
+
+                                <p>Here, <code translate="no" dir="ltr">MyMessage::descriptor()-&gt;options()</code>
+                                    returns the <code translate="no" dir="ltr">MessageOptions</code> protocol message
+                                    for <code translate="no" dir="ltr">MyMessage</code>. Reading custom options from it
+                                    is just like reading any other <a href="#extensions">extension</a>.</p>
+
+                                <p>Similarly, in Java we would write:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">String value = MyProtoFile.MyMessage.getDescriptor().getOptions()
+  .getExtension(MyProtoFile.myOption);
+</pre>
+
+                                <p>In Python it would be:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">value = my_proto_file_pb2.MyMessage.DESCRIPTOR.GetOptions()
+  .Extensions[my_proto_file_pb2.my_option]
+</pre>
+
+                                <p>Custom options can be defined for every kind of construct in the Protocol Buffers
+                                    language. Here is an example that uses every kind of option:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">import "google/protobuf/descriptor.proto";
+
+extend google.protobuf.FileOptions {
+  optional string my_file_option = 50000;
+}
+extend google.protobuf.MessageOptions {
+  optional int32 my_message_option = 50001;
+}
+extend google.protobuf.FieldOptions {
+  optional float my_field_option = 50002;
+}
+extend google.protobuf.OneofOptions {
+  optional int64 my_oneof_option = 50003;
+}
+extend google.protobuf.EnumOptions {
+  optional bool my_enum_option = 50004;
+}
+extend google.protobuf.EnumValueOptions {
+  optional uint32 my_enum_value_option = 50005;
+}
+extend google.protobuf.ServiceOptions {
+  optional MyEnum my_service_option = 50006;
+}
+extend google.protobuf.MethodOptions {
+  optional MyMessage my_method_option = 50007;
+}
+
+option (my_file_option) = "Hello world!";
+
+message MyMessage {
+  option (my_message_option) = 1234;
+
+  optional int32 foo = 1 [(my_field_option) = 4.5];
+  optional string bar = 2;
+  oneof qux {
+    option (my_oneof_option) = 42;
+
+    string quux = 3;
+  }
+}
+
+enum MyEnum {
+  option (my_enum_option) = true;
+
+  FOO = 1 [(my_enum_value_option) = 321];
+  BAR = 2;
+}
+
+message RequestType {}
+message ResponseType {}
+
+service MyService {
+  option (my_service_option) = FOO;
+
+  rpc MyMethod(RequestType) returns(ResponseType) {
+    // Note:  my_method_option has type MyMessage.  We can set each field
+    //   within it using a separate "option" line.
+    option (my_method_option).foo = 567;
+    option (my_method_option).bar = "Some string";
+  }
+}
+</pre>
+
+                                <p>Note that if you want to use a custom option in a package other than the one in which
+                                    it was defined, you must prefix the option name with the package name, just as you
+                                    would for type names. For example:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">// foo.proto
+import "google/protobuf/descriptor.proto";
+package foo;
+extend google.protobuf.MessageOptions {
+  optional string my_option = 51234;
+}
+</pre>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">// bar.proto
+import "foo.proto";
+package bar;
+message MyMessage {
+  option (foo.my_option) = "Hello world!";
+}
+</pre>
+
+                                <p>One last thing: Since custom options are extensions, they must be assigned field
+                                    numbers like any other field or extension. In the examples above, we have used field
+                                    numbers in the range 50000-99999. This range is reserved for internal use within
+                                    individual organizations, so you can use numbers in this range freely for in-house
+                                    applications. If you intend to use custom options in public applications, however,
+                                    then it is important that you make sure that your field numbers are globally unique.
+                                    To obtain globally unique field numbers, please send a request to add an entry to <a
+                                        href="https://github.com/protocolbuffers/protobuf/blob/master/docs/options.md">protobuf
+                                        global extension registry</a>. Usually you only need one extension number. You
+                                    can declare multiple options with only one extension number by putting them in a
+                                    sub-message:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no" dir="ltr">message FooOptions {
+  optional int32 opt1 = 1;
+  optional string opt2 = 2;
+}
+
+extend google.protobuf.FieldOptions {
+  optional FooOptions foo_options = 1234;
+}
+
+// usage:
+message Bar {
+  optional int32 a = 1 [(foo_options).opt1 = 123, (foo_options).opt2 = "baz"];
+  // alternative aggregate syntax (uses TextFormat):
+  optional int32 b = 2 [(foo_options) = { opt1: 123 opt2: "baz" }];
+}
+</pre>
+
+                                <p>Also, note that each option type (file-level, message-level, field-level, etc.) has
+                                    its own number space, so e.g. you could declare extensions of FieldOptions and
+                                    MessageOptions with the same number.</p>
+
+                                <h2 id="generating" data-text="Generating Your Classes" tabindex="0">Generating Your
+                                    Classes</h2>
+
+                                <p>To generate the Java, Python, or C++ code you need to work with the message types
+                                    defined in a <code translate="no" dir="ltr">.proto</code> file, you need to run the
+                                    protocol buffer compiler <code translate="no" dir="ltr">protoc</code> on the <code
+                                        translate="no" dir="ltr">.proto</code>. If you haven&#39;t installed the
+                                    compiler, <a href="/protocol-buffers/docs/downloads">download the package</a> and
+                                    follow the instructions in the README.</p>
+
+                                <p>The Protocol Compiler is invoked as follows:</p>
+
+                                <pre class="prettyprint lang-proto" translate="no"
+                                    dir="ltr">protoc --proto_path=_IMPORT_PATH_ --cpp_out=_DST_DIR_ --java_out=_DST_DIR_ --python_out=_DST_DIR_ _path/to/file_.proto</pre>
+
+                                <ul>
+                                    <li><code translate="no" dir="ltr">IMPORT_PATH</code> specifies a directory in which
+                                        to look for <code translate="no" dir="ltr">.proto</code> files when resolving
+                                        <code translate="no" dir="ltr">import</code> directives. If omitted, the current
+                                        directory is used. Multiple import directories can be specified by passing the
+                                        <code translate="no" dir="ltr">--proto_path</code> option multiple times; they
+                                        will be searched in order. <code translate="no"
+                                            dir="ltr">-I=_IMPORT_PATH_</code> can be used as a short form of <code
+                                            translate="no" dir="ltr">--proto_path</code>.</li>
+                                    <li>You can provide one or more <em>output directives</em>:
+                                        <ul>
+                                            <li><code translate="no" dir="ltr">--cpp_out</code> generates C++ code in
+                                                <code translate="no" dir="ltr">DST_DIR</code>. See the <a
+                                                    href="/protocol-buffers/docs/reference/cpp-generated">C++ generated
+                                                    code reference</a> for more.</li>
+                                            <li><code translate="no" dir="ltr">--java_out</code> generates Java code in
+                                                <code translate="no" dir="ltr">DST_DIR</code>. See the <a
+                                                    href="/protocol-buffers/docs/reference/java-generated">Java
+                                                    generated code reference</a> for more.</li>
+                                            <li><code translate="no" dir="ltr">--python_out</code> generates Python code
+                                                in <code translate="no" dir="ltr">DST_DIR</code>. See the <a
+                                                    href="/protocol-buffers/docs/reference/python-generated">Python
+                                                    generated code reference</a> for more.As an extra convenience, if
+                                                the <code translate="no" dir="ltr">DST_DIR</code> ends in <code
+                                                    translate="no" dir="ltr">.zip</code> or <code translate="no"
+                                                    dir="ltr">.jar</code>, the compiler will write the output to a
+                                                single ZIP-format archive file with the given name. <code translate="no"
+                                                    dir="ltr">.jar</code> outputs will also be given a manifest file as
+                                                required by the Java JAR specification. Note that if the output archive
+                                                already exists, it will be overwritten; the compiler is not smart enough
+                                                to add files to an existing archive.</li>
+                                        </ul>
+                                    </li>
+                                    <li>You must provide one or more <code translate="no" dir="ltr">.proto</code> files
+                                        as input. Multiple <code translate="no" dir="ltr">.proto</code> files can be
+                                        specified at once. Although the files are named relative to the current
+                                        directory, each file must reside in one of the <code translate="no"
+                                            dir="ltr">IMPORT_PATH</code>s so that the compiler can determine its
+                                        canonical name.</li>
+                                </ul>
+
+                            </div>
+
+
+                            <devsite-page-rating position="footer" selected-rating="0" hover-rating-star="0">
+                            </devsite-page-rating>
+
+
+                        </article>
+                    </article>
+
+                    <devsite-content-footer class="nocontent">
+                        <p>作者</p>
+                        <p>Last updated 2020-06-25.</p>
+                    </devsite-content-footer>
+
+
+
+                </devsite-content>
+            </main>
+            <devsite-footer-utility class="devsite-footer">
+                <div class="devsite-footer-utility nocontent">
+                    <nav class="devsite-footer-utility-links">
+                        <ul class="devsite-footer-utility-list">
+                            <li class="devsite-footer-utility-item">XX
+                            </li>
+                            <li class="devsite-footer-utility-item">
+                                XX2
+                            </li>
+                            <li class="devsite-footer-utility-item devsite-footer-utility-button">
+                                <span class="devsite-footer-utility-description">version</span>
+                            </li>
+                        </ul>
+                        <devsite-language-selector>
+                            <devsite-select class="devsite-language-selector-menu">
+                                <select class="devsite-language-selector-select" name="language">
+                                    <option value="en" selected="selected">
+                                        go
+                                    </option>
+
+                                </select>
+                            </devsite-select>
+                        </devsite-language-selector>
+                    </nav>
+                </div>
+            </devsite-footer-utility>
+        </section>
+    </section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+        <script type="application/json" analytics>
+            [{
+                "metrics": {
+                    "ratings_value": "metric1",
+                    "ratings_count": "metric2"
+                },
+                "dimensions": {
+                    "dimension6": "en",
+                    "dimension4": "Protocol Buffers",
+                    "dimension5": "en",
+                    "dimension3": false,
+                    "dimension1": "Signed In",
+                    "dimension8": null,
+                    "dimension11": false
+                },
+                "gaid": "UA-24532603-1"
+            }]
+        </script>
+        <script type="application/json" gtm>
+            {
+                "parameters": {
+                    "freeTrialEligibleUser": "False",
+                    "language": {
+                        "machineTranslated": false,
+                        "requested": "en",
+                        "served": "en"
+                    },
+                    "projectName": "Protocol Buffers",
+                    "scriptsafe": null,
+                    "signedIn": "True",
+                    "internalUser": "False",
+                    "tenant": "developers"
+                }
+            }
+        </script>
+    </devsite-analytics>
+    <script>
+        (function (d, e, v, s, i, t, E) {
+            d['GoogleDevelopersObject'] = i;
+            t = e.createElement(v);
+            t.async = 1;
+            t.src = s;
+            E = e.getElementsByTagName(v)[0];
+            E.parentNode.insertBefore(t, E);
+        })(window, document, 'script',
+            'https://www.gstatic.com/devrel-devsite/prod/vc0d10ef7c6e8aac6c71e2a2051f66f30f3c99a4b52237746839ce4f1fae2b7b4/js/app_loader.js',
+            '[1,"en",null,"/js/devsite_app.js","https://www.gstatic.com/devrel-devsite/prod/vc0d10ef7c6e8aac6c71e2a2051f66f30f3c99a4b52237746839ce4f1fae2b7b4","https://www.gstatic.com/devrel-devsite/prod/vc0d10ef7c6e8aac6c71e2a2051f66f30f3c99a4b52237746839ce4f1fae2b7b4/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","/_static/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vc0d10ef7c6e8aac6c71e2a2051f66f30f3c99a4b52237746839ce4f1fae2b7b4/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1]'
+        )
+    </script>
+</body>
+
+</html>
