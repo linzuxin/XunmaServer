@@ -17,6 +17,7 @@
  */
 
 #include <iostream>
+#include <fstream>
 #include <memory>
 #include <string>
 
@@ -24,6 +25,9 @@
 #include <grpcpp/grpcpp.h>
 #include <grpcpp/health_check_service_interface.h>
 #include <grpcpp/ext/proto_server_reflection_plugin.h>
+#include <grpcpp/security/credentials.h>
+#include <grpcpp/security/server_credentials.h>
+#include <grpcpp/support/channel_arguments.h>
 
 #ifdef BAZEL_BUILD
 #include "examples/protos/helloworld.grpc.pb.h"
@@ -39,8 +43,8 @@ using helloworld::Greeter;
 using helloworld::HelloReply;
 using helloworld::HelloRequest;
 
-const char servercert_path[] = "./cert.pem";
-const char serverkey_path[] = "./key.pem";
+const char servercert_path[] = "./2602795_api.zncode.com.pem";
+const char serverkey_path[] = "./2602795_api.zncode.com.key";
 // Logic and data behind the server's behavior.
 class GreeterServiceImpl final : public Greeter::Service
 {
@@ -48,26 +52,44 @@ class GreeterServiceImpl final : public Greeter::Service
                   HelloReply *reply) override
   {
     std::string prefix("Hello ");
+    //context->AddInitialMetadata("Access-Control-Allow-Origin", "*");
+		//context->AddInitialMetadata("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE");
+		//context->AddInitialMetadata("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, x-user-agent, x-grpc-web, grpc-status, grpc-message");
     reply->set_message(prefix + request->name());
     return Status::OK;
   }
 };
 
+static std::string get_file_contents(const char *fpath)
+{
+  std::ifstream finstream(fpath);
+  std::string contents;
+  contents.assign((std::istreambuf_iterator<char>(finstream)),
+                  std::istreambuf_iterator<char>());
+  finstream.close();
+  return contents;
+}
+
 void RunServer()
 {
-  std::string server_address("0.0.0.0:50051");
+  std::string server_address("0.0.0.0:9090");
   GreeterServiceImpl service;
 
   auto servercert = get_file_contents(servercert_path);
   auto serverkey = get_file_contents(serverkey_path);
-  std::shared_ptr<ServerCredentials> creds;
 
-  bool enable_ssl = false;
+  //auto channel_creds = grpc::SslCredentials(grpc::SslCredentialsOptions());
+  // auto channel = grpc::CreateChannel("myservice.example.com", channel_creds);
+  // std::unique_ptr<Greeter::Stub> stub(Greeter::NewStub(channel));
+
+  std::shared_ptr<grpc::ServerCredentials> creds;
+
+  bool enable_ssl = true;
   if (enable_ssl)
   {
     grpc::SslServerCredentialsOptions::PemKeyCertPair pkcp = {
         serverkey.c_str(), servercert.c_str()};
-    grpc::SslServerCredentialsOptions ssl_opts;
+    grpc::SslServerCredentialsOptions ssl_opts;//GRPC_SSL_REQUEST_CLIENT_CERTIFICATE_BUT_DONT_VERIFY GRPC_SSL_DONT_REQUEST_CLIENT_CERTIFICATE
     ssl_opts.pem_root_certs = "";
     ssl_opts.pem_key_cert_pairs.push_back(pkcp);
     creds = grpc::SslServerCredentials(ssl_opts);

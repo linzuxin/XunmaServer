@@ -4,11 +4,14 @@
   "description": "gRPC-Web simple example",
   "main": "server.js",
   "scripts": {
-    "cert":"openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem",
+    "cert": "openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem",
     "build": "npx webpack client.js",
-    "start": "rm -rf dist && npx webpack client.js && npx http-server -S"
+    "startssl": "rm -rf dist && npx webpack clientssl.js && npx http-server -S -C 2602795_api.zncode.com.pem -K 2602795_api.zncode.com.key",
+    "start": "rm -rf dist && npx webpack client.js && npx http-server",
+    "testssl": "openssl s_client -connect localhost:9090 -state -debug"
   },
   "devDependencies": {
+    "grpc": "^1.11.0",
     "@grpc/grpc-js": "~1.0.5",
     "@grpc/proto-loader": "~0.5.4",
     "async": "~1.5.2",

@@ -6,7 +6,7 @@ const {
   GreeterClient
 } = require('./helloworld_grpc_web_pb.js');
 
-var client = new GreeterClient('https://127.0.0.1:50051', null, null);
+var client = new GreeterClient('http://api.zncode.com:8080', null, null);
 
 var request = new HelloRequest();
 request.setName('World');

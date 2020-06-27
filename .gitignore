@@ -4,3 +4,7 @@ dist/
 .vscode/
 
 package-lock.json
+src/2602795_api.zncode.com.pem
+src/2602795_api.zncode.com.key
+client/2602795_api.zncode.com.key
+client/2602795_api.zncode.com.pem
