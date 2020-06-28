@@ -1,19 +1,3 @@
-#
-# Copyright 2015 gRPC authors.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
-
 HOST_SYSTEM = $(shell uname | cut -f 1 -d_)
 SYSTEM ?= $(HOST_SYSTEM)
 CXX = g++
@@ -38,21 +22,18 @@ PROTOS_PATH = protos
 
 vpath %.proto $(PROTOS_PATH)
 
-all: system-check greeter_server
+all: system-check server server_ssl async_server async_server_ssl
 
-greeter_client: helloworld.pb.o helloworld.grpc.pb.o greeter_client.o
+server: helloworld.pb.o helloworld.grpc.pb.o server.o
 	$(CXX) $^ $(LDFLAGS) -o $@
 
-greeter_server: helloworld.pb.o helloworld.grpc.pb.o greeter_server.o
+server_ssl: helloworld.pb.o helloworld.grpc.pb.o server_ssl.o
 	$(CXX) $^ $(LDFLAGS) -o $@
 
-greeter_async_client: helloworld.pb.o helloworld.grpc.pb.o greeter_async_client.o
+async_server: helloworld.pb.o helloworld.grpc.pb.o async_server.o
 	$(CXX) $^ $(LDFLAGS) -o $@
 
-greeter_async_client2: helloworld.pb.o helloworld.grpc.pb.o greeter_async_client2.o
-	$(CXX) $^ $(LDFLAGS) -o $@
-
-greeter_async_server: helloworld.pb.o helloworld.grpc.pb.o greeter_async_server.o
+async_server_ssl: helloworld.pb.o helloworld.grpc.pb.o async_server_ssl.o
 	$(CXX) $^ $(LDFLAGS) -o $@
 
 .PRECIOUS: %.grpc.pb.cc
@@ -64,11 +45,8 @@ greeter_async_server: helloworld.pb.o helloworld.grpc.pb.o greeter_async_server.
 	$(PROTOC) -I $(PROTOS_PATH) --cpp_out=. $<
 
 clean:
-	rm -f *.o *.pb.cc *.pb.h greeter_client greeter_server greeter_async_client greeter_async_client2 greeter_async_server
+	rm -f *.o *.pb.cc *.pb.h server server_ssl async_server async_server_ssl
 
-
-# The following is to test your system and ensure a smoother experience.
-# They are by no means necessary to actually compile a grpc-enabled software.
 
 PROTOC_CMD = which $(PROTOC)
 PROTOC_CHECK_CMD = $(PROTOC) --version | grep -q libprotoc.3
